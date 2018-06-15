@@ -1,0 +1,71 @@
+/*quita margenes y padding de scrollbar*/
+#menuDiv .mCSB_container_wrapper
+{
+    margin-right: 0 !important;
+}
+#menuDiv .mCSB_container_wrapper > .mCSB_container
+{
+    padding-right: 0 !important;
+}
+.menu-icon
+{
+    float: left;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+}
+
+#favoritosDiv .mCSB_container_wrapper
+{
+    margin-right: 0 !important;
+}
+#favoritosDiv .mCSB_container_wrapper > .mCSB_container
+{
+    padding-right: 0 !important;
+}
+
+/*Resultado de busqueda*/
+#busquedaDiv a
+{
+    color:#1a0dab;
+    font-size:18px;
+    font-weight:normal;
+    text-decoration:none;
+}
+
+#busquedaDiv cite
+{
+    color: #006621;
+    font-style: normal;
+}
+#busquedaDiv .descripcion
+{
+    color: #545454;
+}
+#palabraClaveSpan
+{
+    color:#1a0dab;
+    font-style:italic;
+}
+
+/*Resultado de búsqueda*/
+
+.modal.modal-wide .modal-dialog
+{
+    width: 90%;
+}
+.modal-wide .modal-body
+{
+    overflow-y: auto;
+}
+.campoObligatorio{
+    background-color:#fff59d !important;
+}
+.campoOpcional{
+    background-color:#e0e0e0 !important;
+}
+.campoSoloLectura{
+    background-color:#81c784 !important;
+}

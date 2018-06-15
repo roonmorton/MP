@@ -1,0 +1,37 @@
+﻿.circulo
+{
+   padding: 3px 7px;
+   background-color: #FFFFFF;
+   color: #428bca;
+   border-radius: 1000px;
+   font-weight: 500;
+}
+.resaltar
+{
+   color: #8a6d3b !important;
+   background-color: #ff0 !important;
+   border-color: #faebcc !important;
+}
+.checkbox-primary label
+{
+   font-weight: bold;
+}
+.CampoOpcional
+{
+   background-color: rgba(204,204,204,0.4) !important;
+}
+
+.CampoObligatorio
+{
+   background-color: rgba(255,255,204,0.7) !important;
+}
+.CampoDespliegue
+{
+   background-color: rgba(81, 196, 75,0.4) !important;
+}
+.resaltar
+{
+   color: #8a6d3b !important;
+   background-color: #ff0 !important;
+   border-color: #faebcc !important;
+}

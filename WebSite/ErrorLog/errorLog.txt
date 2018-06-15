@@ -1,0 +1,1 @@
+15/06/2018 7:51:40,forastero,   en vistas_pacBasales.btnPrueba_Click(Object sender, EventArgs e) en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 18,btnPrueba,Error:Prueba de excepcion-btnPrueba_Click
