@@ -74,6 +74,7 @@ folder instead of downloading all of them to reduce the load. -->
    <script src='<%=ResolveClientUrl("~/dist/js/bootstrap-datetimepicker.js") %>'></script>
    <script src='<%=ResolveClientUrl("~/dist/js/jquery.maskedinput.js") %>'></script>
    <script src='<%=ResolveClientUrl("~/dist/js/bootstrapvalidator.js") %>'></script>
+    <script src='<%=ResolveClientUrl("~/js/bootbox.min.js") %>'></script>
    <asp:ContentPlaceHolder ID="head" runat="server">
    </asp:ContentPlaceHolder>
 </head>

@@ -14,6 +14,7 @@ public partial class vistas_pacBasales : System.Web.UI.Page
     {
         Session["Usuario"] = "Ardani";
         Session["idPaciente"] = "3";
+        clsHelper.mensaje(Request.Url.Segments[Request.Url.Segments.Length - 1], this, clsHelper.tipoMensaje.informacion, true);
         try
         {
             if (!IsPostBack)
@@ -126,6 +127,12 @@ public partial class vistas_pacBasales : System.Web.UI.Page
             pac.condicionSocial = getValueI(cboCondicionSocial);
             pac.Nacionalidad = getValueI(cboNacionalidad);
 
+            //valida 
+            string validacionTexto = pac.validacionesDB();
+            if(!string.IsNullOrEmpty(validacionTexto)){
+                clsHelper.mensaje(validacionTexto,this,clsHelper.tipoMensaje.msgbx);
+                return;
+            }
             //graba / modifica
             string id = pac.grabar();
             if (!string.IsNullOrEmpty(id))

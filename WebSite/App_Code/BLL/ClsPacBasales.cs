@@ -201,4 +201,33 @@ public class ClsPacBasales
             throw ex;
         }
     }
+
+
+    public string validacionesDB() {
+        DataTable dt = new DataTable();
+        string r  = string.Empty ;
+        try
+        {
+            dt = db.dataTableSP("SPValidacionesPacBasales", null
+                , db.parametro("@PIdPaciente", this.IdPaciente)
+                , db.parametro("@PExpedienteHR", this.ExpedienteHR)
+                , db.parametro("@PExpedientePD", this.ExpedientePD)
+                , db.parametro("@PPrimerNombre", this.PrimerNombre)
+                , db.parametro("@PSegundoNombre", this.SegundoNombre)
+                , db.parametro("@PPrimerApellido", this.PrimerApellido)
+                , db.parametro("@PSegundoApellido", this.SegundoApellido)
+                , db.parametro("@PFechaNacimiento", this.FechaNacimiento)
+                , db.parametro("@PFecha1Visita", this.Fecha1Visita)
+                );
+            if (dt.Rows.Count > 0) {
+                r = dt.Rows[0][0].ToString();
+            }
+            return r;
+        }
+        catch (Exception ex)
+        {
+            
+            throw ex;
+        }
+    }
 }

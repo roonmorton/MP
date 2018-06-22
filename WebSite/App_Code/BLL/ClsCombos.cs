@@ -10,16 +10,16 @@ using System.Data;
 public class ClsCombos
 {
     ClsDb db = new ClsDb();
-	public DataTable fill(string tabla,string condicion="",Boolean seleccione=true)
+    public DataTable fill(string tabla, string condicion = "", Boolean seleccione = true, string dataField = "id", string textField = "nombre")
 	{
         DataTable dt = new DataTable();
         string consulta=string.Empty;
         try
         {
             if (seleccione) {
-                consulta = "SELECT '' id, 'Seleccione' nombre UNION ALL ";
+                consulta = "SELECT '' " + dataField +", 'Seleccione' "+ textField +" UNION ALL ";
             }
-            consulta += "SELECT CONVERT(VARCHAR,id) id,nombre FROM " + tabla;
+            consulta += "SELECT CONVERT(VARCHAR," + dataField +") " + dataField +","+ textField +" FROM " + tabla;
             if(!string.IsNullOrEmpty(condicion) ){
                 consulta +=" WHERE " + condicion;
             }
