@@ -9,7 +9,7 @@ using System.Configuration;
 
    public class ClsDb
    {
-      private SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["cnDefault"].ConnectionString);
+      public SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["cnDefault"].ConnectionString);
       
       public Boolean fNull(string xstring)
       {
@@ -168,14 +168,17 @@ using System.Configuration;
             cn.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = spNombre;
-            cmd.Connection = cn;
+            
             if (arrParam.Length > 0)
             {
                foreach (SqlParameter param in arrParam)
                {
                   cmd.Parameters.Add(param);
                }
+                
             }
+           
+            cmd.Connection = cn;
             da.SelectCommand = cmd;
             da.Fill(tabla);
             if (cn.State == ConnectionState.Open) cn.Close();
@@ -287,5 +290,26 @@ using System.Configuration;
       }
 
 
+      public SqlParameter parametro(string nombreParametro, object valor)
+      {
+          SqlParameter parametro = new SqlParameter();
+          try{
+               if (valor == null)
+                  {
+                      parametro = new SqlParameter(nombreParametro.Trim(), DBNull.Value);
+                  }
+                  else {
+                      parametro = new SqlParameter(nombreParametro.Trim(), valor);
+                  }
+             
+              return parametro;
+          }
+          catch (Exception ex)
+          {
+
+              throw ex;
+          }
+
+      }
 
    }//EOCls
