@@ -14,9 +14,16 @@ public partial class vistas_security : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            Session["Usuario"] = "Ardani";
             crol.idRol = null;
             ViewState["idRol"] = null;
+            ViewState["idUsuario"] = null;
+            ViewState["modoGrabarUsuario"] = "N";
+            cargarUsuarios();
+            limpiarUsuario();
             cargarRoles();
+            limpiarRol();
+            cargarComboRolUsuario();
             cargarComboRolacceso();
             cargarComboNivelAcceso();
             //lnkUsuarios.Attributes.Add("class", "active");
@@ -191,10 +198,7 @@ public partial class vistas_security : System.Web.UI.Page
             clsHelper.mostrarError("btnGrabarAccesos_Click", ex, this, true);
         }
     }
-    protected void btnGrabarUsuarios_Click(object sender, EventArgs e)
-    {
 
-    }
     protected void lnkEliminarAcceso_Click(object sender, EventArgs e)
     {
         try
@@ -256,6 +260,206 @@ public partial class vistas_security : System.Web.UI.Page
 
     //*****************************************************************//Accesos
 
+    //*****************************************************************//USuarios
+    void cargarComboRolUsuario()
+    {
+        try
+        {
+            confCombo(cboRolUsuario, "TblSecRol", "", true, "idRol", "nombre");
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
+
+    void limpiarUsuario()
+    {
+        try
+        {
+            txtNombrePersona.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtPassword2.Text = string.Empty;
+            chkActivo.Checked = true;
+            chkActivo.Enabled=false;
+            chkReiniciarPassword.Checked = false;
+            chkReiniciarPassword.Enabled = false;
+            ViewState["idUsuario"] = null;
+            cboRolUsuario.SelectedValue = string.Empty;
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+
+        }
+    }
+
+    protected void lnkEditUsuario_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            visualizarTabs("usuarioTab");
+            ClsUsuario dt = new ClsUsuario();
+            ClsUsuario us = new ClsUsuario();
+            GridViewRow r;
+            int idUsuario;
+            r = (GridViewRow)((Control)sender).Parent.Parent;
+            idUsuario = int.Parse(r.Cells[0].Text);
+            dt = us.getById(idUsuario);
+
+            ViewState["idUsuario"] = dt.idUsuario;
+            txtNombrePersona.Text = dt.nombreUsuario;
+            txtUsuario.Text = dt.usuario;
+            cboRolUsuario.SelectedValue = dt.idRol.ToString();
+            chkActivo.Checked = dt.activo;
+
+            chkActivo.Enabled = true;
+            chkReiniciarPassword.Enabled = true;
+            ViewState["modoGrabarUsuario"] = "M";
+        }
+        catch (Exception ex)
+        {
+
+            clsHelper.mostrarError("lnkEditUsuario_Click", ex, this, true);
+        }
+    }
+    protected void btnNuevoUsuario_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            visualizarTabs("usuarioTab");
+            limpiarUsuario();
+        }
+        catch (Exception ex)
+        {
+
+            clsHelper.mostrarError("btnNuevoUsuario_Click", ex, this, true);
+        }
+    }
+
+    protected void btnGrabarUsuarios_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            ClsUsuario us = new ClsUsuario();
+              visualizarTabs("usuarioTab");
+              if (!validarUsuario()) {
+                  return;
+              }
+              if (ViewState["idUsuario"] == null)
+              {
+                  us.idUsuario = null;
+              }
+              else {
+                  us.idUsuario = (int)ViewState["idUsuario"];
+              }
+              
+              us.nombreUsuario = txtNombrePersona.Text.Trim();
+              us.usuario = txtUsuario.Text.Trim();
+              us.contrasena = txtPassword.Text.Trim();
+              us.idRol = int.Parse(cboRolUsuario.SelectedValue.ToString());
+              us.activo = chkActivo.Checked;
+              us.usuarioOpera = Session["Usuario"].ToString();
+              us.grabar();
+              clsHelper.mensaje("Proceso exitoso", this, clsHelper.tipoMensaje.informacion, true);
+              limpiarUsuario();
+              cargarUsuarios();
+        }
+        catch (Exception ex)
+        {
+            
+            clsHelper.mostrarError("btnGrabarUsuarios_Click", ex, this, true);
+        }
+    }
+
+
+    Boolean validarUsuario() {
+        if (string.IsNullOrEmpty(txtNombrePersona.Text)) {
+            clsHelper.mensaje("Ingrese nombre de la persona", this,clsHelper.tipoMensaje.alerta, true);
+            txtNombrePersona.Focus();
+            return false;
+        }
+        if (string.IsNullOrEmpty(txtUsuario.Text))
+        {
+            clsHelper.mensaje("Ingrese el usuario", this, clsHelper.tipoMensaje.alerta, true);
+            txtUsuario.Focus();
+            return false;
+        }
+
+        if (ViewState["modoGrabarUsuario"].ToString().Equals("N"))
+        {
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                clsHelper.mensaje("Ingrese la contraseña", this, clsHelper.tipoMensaje.alerta, true);
+                txtPassword.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtPassword2.Text))
+            {
+                clsHelper.mensaje("debe confirmar la contraseña", this, clsHelper.tipoMensaje.alerta, true);
+                txtPassword2.Focus();
+                return false;
+            }
+
+            if (!txtPassword.Text.Equals(txtPassword2.Text))
+            {
+                clsHelper.mensaje("Las contraseñas ingresadas no coinciden", this, clsHelper.tipoMensaje.alerta, true);
+                return false;
+            }
+        }
+
+        if (ViewState["modoGrabarUsuario"].ToString().Equals("M"))
+        {
+            if (chkReiniciarPassword.Checked == true)
+            {
+                if (string.IsNullOrEmpty(txtPassword.Text))
+                {
+                    clsHelper.mensaje("Ingrese la contraseña", this, clsHelper.tipoMensaje.alerta, true);
+                    txtPassword.Focus();
+                    return false;
+                }
+                if (string.IsNullOrEmpty(txtPassword2.Text))
+                {
+                    clsHelper.mensaje("debe confirmar la contraseña", this, clsHelper.tipoMensaje.alerta, true);
+                    txtPassword2.Focus();
+                    return false;
+                }
+
+                if (!txtPassword.Text.Equals(txtPassword2.Text)) {
+                    clsHelper.mensaje("Las contraseñas ingresadas no coinciden", this, clsHelper.tipoMensaje.alerta, true);
+                    return false;
+                }
+            }
+        }
+
+
+        if (string.IsNullOrEmpty(cboRolUsuario.SelectedValue.ToString()))
+        {
+            clsHelper.mensaje("Debe seleccionar un rol", this, clsHelper.tipoMensaje.alerta, true);
+            return false;
+        }
+
+
+        return true;
+    }
+
+    public void cargarUsuarios() {
+        try
+        {
+            ClsUsuario us = new ClsUsuario();
+            grdUsuarios.DataSource = us.select();
+            grdUsuarios.DataBind();
+        }
+        catch (Exception ex)
+        {
+            
+            throw ex;
+        }
+    }
+
+    //*****************************************************************//USUARIOS
 
     void confCombo(DropDownList combo, string tabla, string condicion = "", Boolean seleccione = true, string dataField = "id", string textField = "nombre")
     {
@@ -322,4 +526,5 @@ public partial class vistas_security : System.Web.UI.Page
         }
     }
 
+    
 }
