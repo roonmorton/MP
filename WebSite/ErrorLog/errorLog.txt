@@ -137,3 +137,5 @@ Se terminó la instrucción.-grabar
    en System.Web.HttpResponse.Redirect(String url)
    en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
 27/06/2018 21:37:50,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+28/06/2018 14:26:55,forastero,   en vistas_pacBasales.asignarPermisos() en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 749
+   en vistas_pacBasales.Page_Load(Object sender, EventArgs e) en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 20,load,Error:Subproceso anulado.-asignarPermisos
