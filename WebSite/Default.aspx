@@ -7,8 +7,10 @@
     <title>Login</title>
     <link rel="Stylesheet" href="css/bootstrap.min.css" />
     <link rel="Stylesheet" href="dist/css/login.css" />
+    <link rel="Stylesheet" href="css/alertify.min.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/bootstrap.js"></script>
+    <script src="js/alertify.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,15 +22,14 @@
                 <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                     alt="">
                 <form class="form-signin">
-                <input type="text" class="form-control" placeholder="Email" required autofocus>
-                <input type="password" class="form-control" placeholder="Password" required>
-                <asp:LinkButton runat="server" ID="btnLogin" class="btn btn-lg btn-primary btn-block" >Ingresar</asp:LinkButton> 
+                <asp:TextBox runat="server"  ID="txtUsuario" class="form-control" placeholder="usuario" required autofocus></asp:TextBox><br />
+                <asp:TextBox runat="server"  ID="txtContrasena" TextMode="Password"  class="form-control" placeholder="Password" required></asp:TextBox>
+                <asp:LinkButton runat="server" ID="btnLogin" class="btn btn-lg btn-primary btn-block" OnClick="btnLogin_Click" >Ingresar</asp:LinkButton> 
                    
                
                 <span class="clearfix"></span>
                 </form>
             </div>
-            <a href="#" class="text-center new-account">Create an account </a>
         </div>
     </div>
 </div>

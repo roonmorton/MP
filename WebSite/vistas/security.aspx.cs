@@ -14,6 +14,7 @@ public partial class vistas_security : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            asignarPermisos();
             Session["Usuario"] = "Ardani";
             crol.idRol = null;
             ViewState["idRol"] = null;
@@ -35,6 +36,11 @@ public partial class vistas_security : System.Web.UI.Page
     {
         try
         {
+            if (!(Boolean)ViewState["actualizar"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
             visualizarTabs("rolesTab");
 
             int idRol;
@@ -55,6 +61,12 @@ public partial class vistas_security : System.Web.UI.Page
         try
         {
             visualizarTabs("rolesTab");
+
+            if (!(Boolean)ViewState["crear"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
 
             if (string.IsNullOrEmpty(txtNombreRol.Text.Trim()))
             {
@@ -161,6 +173,12 @@ public partial class vistas_security : System.Web.UI.Page
         try
         {
             visualizarTabs("accesosTab");
+            if (!(Boolean)ViewState["crear"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
+
             ClsAccesoPantalla cpantalla = new ClsAccesoPantalla();
             
             if (string.IsNullOrEmpty(cboRolAcceso.SelectedValue.ToString()))
@@ -204,6 +222,12 @@ public partial class vistas_security : System.Web.UI.Page
         try
         {
             visualizarTabs("accesosTab");
+            if (!(Boolean)ViewState["eliminar"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
+
             GridViewRow r = (GridViewRow)((Control)sender).Parent.Parent;
             int idPantalla = int.Parse(r.Cells[0].Text);
             int idModoAcceso = int.Parse(r.Cells[3].Text);
@@ -301,6 +325,11 @@ public partial class vistas_security : System.Web.UI.Page
         try
         {
             visualizarTabs("usuarioTab");
+            if (!(Boolean)ViewState["actualizar"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
             ClsUsuario dt = new ClsUsuario();
             ClsUsuario us = new ClsUsuario();
             GridViewRow r;
@@ -345,6 +374,13 @@ public partial class vistas_security : System.Web.UI.Page
         {
             ClsUsuario us = new ClsUsuario();
               visualizarTabs("usuarioTab");
+
+              if (!(Boolean)ViewState["crear"])
+              {
+                  clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                  return;
+              }
+
               if (!validarUsuario()) {
                   return;
               }
@@ -361,6 +397,7 @@ public partial class vistas_security : System.Web.UI.Page
               us.contrasena = txtPassword.Text.Trim();
               us.idRol = int.Parse(cboRolUsuario.SelectedValue.ToString());
               us.activo = chkActivo.Checked;
+              us.reiniciarContrasena = chkReiniciarPassword.Checked;
               us.usuarioOpera = Session["Usuario"].ToString();
               us.grabar();
               clsHelper.mensaje("Proceso exitoso", this, clsHelper.tipoMensaje.informacion, true);
@@ -526,5 +563,31 @@ public partial class vistas_security : System.Web.UI.Page
         }
     }
 
+
+    void asignarPermisos()
+    {
+        try
+        {
+            ClsAccesoStruc acc = new ClsAccesoStruc();
+            if (Session["idUsuario"] == null)
+            {
+                Response.Redirect("../Default.aspx");
+            }
+            acc = ClsValidaAcceso.validarPantalla((int)Session["idUsuario"], Request.Url.Segments[Request.Url.Segments.Length - 1]);
+            ViewState["leer"] = acc.leer;
+            ViewState["crear"] = acc.crear;
+            ViewState["actualizar"] = acc.actualizar;
+            ViewState["eliminar"] = acc.eliminar;
+            if (!(Boolean)ViewState["leer"])
+            {
+                Response.Redirect("../Default.aspx");
+            }
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
     
 }

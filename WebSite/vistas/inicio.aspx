@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="row">
         <div class="col-lg-6 centrar row">
-            <div class="col-lg-10 ">
+            <div class="col-lg-8 ">
                 <div class="form-group">
                     <label>Criterio de búsqueda (NHC HR, NHC PD, Nombres, Apellidos)</label>
                     <asp:TextBox runat="server" ID="txtBusqueda" placeholder="Buscar"></asp:TextBox>
@@ -15,6 +15,14 @@
                 <div class="form-group">
                     <label>&nbsp;</label><br />
                     <asp:LinkButton runat="server" ID="btnBuscar" CssClass="btn btn-primary" OnClick="btnBuscar_Click">Buscar &nbsp;<i class="fa fa-search" aria-hidden="true"></i></asp:LinkButton>
+                </div>
+
+            </div>
+              
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>&nbsp;</label><br />
+                    <asp:LinkButton runat="server" ID="lnkNuevoPaciente" CssClass="btn btn-primary" OnClick="lnkNuevoPaciente_Click" >Nuevo Paciente &nbsp;<i class="fa fa-wheelchair" aria-hidden="true"></i></asp:LinkButton>
                 </div>
 
             </div>
@@ -43,6 +51,11 @@
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkNuevaVisita" runat="server" OnClick="lnkNuevaVisita_Click">Nueva visita &nbsp; <i class="fa fa-plus-circle" aria-hidden="true"></i></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkVerPaciente" runat="server" OnClick="lnkVerPaciente_Click">Ver Paciente &nbsp; <i class="fa fa-binoculars" aria-hidden="true"></i></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

@@ -12,13 +12,12 @@ public partial class vistas_pacBasales : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        Session["Usuario"] = "Ardani";
-        Session["idPaciente"] = "3";
-        clsHelper.mensaje(Request.Url.Segments[Request.Url.Segments.Length - 1], this, clsHelper.tipoMensaje.informacion, true);
+                
         try
         {
             if (!IsPostBack)
             {
+                asignarPermisos();
                 cargarcombos();
                 if (Session["idPaciente"] != null)
                 {
@@ -45,6 +44,13 @@ public partial class vistas_pacBasales : System.Web.UI.Page
         try
         {
             ClsPacBasales pac = new ClsPacBasales();
+
+            if (!(Boolean)ViewState["crear"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta acción", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
+
             //valida Obligatorios
             if (!validarObligatorios())
             {
@@ -121,7 +127,7 @@ public partial class vistas_pacBasales : System.Web.UI.Page
             pac.Alergicos = txtAlergicos.Text.Trim();
             pac.RevisionPorSistemas = txtRevisionPorSistemas.Text.Trim();
             pac.RiesgoExpuesto = getValueS(cboRiesgoExpuesto);
-            pac.Usuario = Session["Usuario"].ToString();
+            pac.Usuario = Session["usuario"].ToString();
             pac.NombreMadreEncargada = txtNombreMadreEncargada.Text.Trim();
             pac.NombrePadreEncargado = txtNombrePadreEncargado.Text.Trim();
             pac.condicionSocial = getValueI(cboCondicionSocial);
@@ -717,5 +723,31 @@ public partial class vistas_pacBasales : System.Web.UI.Page
         }
     }
 
+
+    void asignarPermisos()
+    {
+        try
+        {
+            ClsAccesoStruc acc = new ClsAccesoStruc();
+            if (Session["idUsuario"] == null)
+            {
+                Response.Redirect("../Default.aspx");
+            }
+            acc = ClsValidaAcceso.validarPantalla((int)Session["idUsuario"], Request.Url.Segments[Request.Url.Segments.Length - 1]);
+            ViewState["leer"] = acc.leer;
+            ViewState["crear"] = acc.crear;
+            ViewState["actualizar"] = acc.actualizar;
+            ViewState["eliminar"] = acc.eliminar;
+            if (!(Boolean)ViewState["leer"])
+            {
+                Response.Redirect("../Default.aspx");
+            }
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
 
 }

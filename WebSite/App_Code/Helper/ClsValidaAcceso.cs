@@ -51,7 +51,7 @@ public static class ClsValidaAcceso
             DataTable dt = new DataTable();
             ClsDb db = new ClsDb();
 
-            dt = db.dataTableSP("", null, db.parametro("@Pusuario", usuario), db.parametro("@Pcontrasena", contrasena));
+            dt = db.dataTableSP("SPLogin", null, db.parametro("@Pusuario", usuario), db.parametro("@Pcontrasena", contrasena));
             if (dt.Rows.Count > 0)
             {
                 us.idUsuario = (int)dt.Rows[0]["idUsuario"];

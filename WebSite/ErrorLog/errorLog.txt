@@ -68,3 +68,72 @@ Se terminó la instrucción.-grabar
 25/06/2018 20:39:44,Ardani,   en vistas_security.btnGrabarUsuarios_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\security.aspx.cs:línea 350,btnGrabarUsuarios_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-btnGrabarUsuarios_Click
 25/06/2018 20:43:44,Ardani,   en ClsUsuario.getById(Int32 id) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsUsuario.cs:línea 69
    en vistas_security.lnkEditUsuario_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\security.aspx.cs:línea 309,lnkEditUsuario_Click,Error:El procedimiento o la función 'SPUsuarioGetByID' esperaba el parámetro '@PidUsuario', que no se ha especificado.-getById
+27/06/2018 20:01:36,forastero,   en vistas_inicio.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 87
+   en vistas_inicio.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 16,Page_Load,Error:Subproceso anulado.-asignarPermisos
+27/06/2018 20:04:44,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:04:44,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 20:46:05,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:46:05,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 20:46:14,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:46:14,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 20:48:40,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:48:41,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:19:54,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:19:54,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:20:54,forastero,   en vistas_inicio.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 87
+   en vistas_inicio.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 16,Page_Load,Error:Subproceso anulado.-asignarPermisos
+27/06/2018 21:21:01,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:21:01,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:21:17,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:21:29,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:22:02,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:35:59,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:36:00,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:37:50,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:37:50,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
