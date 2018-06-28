@@ -442,63 +442,91 @@ using System.Web.Script.Serialization;
 
 }
 
-//   public void mostrarAlerta(String texto, System.Web.UI.Page pagina  , tipoMensaje  tipo ,  Boolean remplazarComillas ){
-//      //Muestra un un globo de texto con alertify.js 
-//      //Autor:AR
-//     try{
-//         string html = string.Empty ;
-//       string script ;
-//       System.Web.UI.MasterPage  master; 
-//         master = pagina.Master;
-//         script = " alertify.set('notifier','position', 'top-right');";
-//         if( remplazarComillas){
-//            texto = texto.Replace("'", "  ").Replace((char)34,(char)0160);
-//         }
-//         texto = texto.Normalize();
-//          switch( tipo){
-//             case tipoMensaje.informacion:
-//               script += " alertify.success('" + texto + "');";
-//                break;
+     public static Nullable<int> valI(string textNumber) {
+          int? r = null;
+          try
+          {
+              if (IsNumeric(textNumber))
+              {
+                  r = int.Parse(textNumber);
+              }
+              else {
+                  r = null;
+              }
+              return r;
+          }
+          catch ( Exception ex)
+          {
+              
+              throw ex;
+          }
+      }
 
-//             case tipoMensaje.alerta:
-//               script += " alertify.error('" + texto + "')";
-//                break;
-//             case tipoMensaje.err:
-//                 html = "<p style='width:100%;overflow:scroll;'>" + texto + "</p>";
-//               script = " alertify.alert().set('label','Aceptar'); ";
-//               script += "alertify.alert('Error','" + html + "');";
-//                break;
-//             case tipoMensaje.msgbx:
-//               html = "<p style='width:100%;overflow:scroll;'>" + texto + "</p>";
-//               script = " alertify.alert().set('label','Aceptar'); ";
-//               script += "alertify.alert('','" + html + "');";
-//                break;
-//          }
-//         pagina.ClientScript.RegisterStartupScript(master.GetType(), "mostrarAlerta", script, true);
-//      }catch(Exception exep){
-//         escribeError(exep.Message + " - MasterHelperMostrarError-  ", exep.StackTrace , exep.StackTrace );
-//      }
-//   }
-   
 
-//   public void mostrarAlertaBootstrap(string mensaje , Page pagina ,  tipoAlerta tipoAlerta ,Boolean tieneMasterPage ){
-//      StringBuilder html = new StringBuilder();
-//      html.Append(" <div class='alert alert-" + tipoAlerta.ToString() + " alert-dismissible' role='alert'>");
-//      html.Append("<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times</span></button>")
-//      html.Append(mensaje);
-//      html.Append("</div>");
-//       System.Web.UI.HtmlControls.HtmlGenericControl divNotifications= new System.Web.UI.HtmlControls.HtmlGenericControl();
-//      LiteralControl control  = new LiteralControl();
-//      control.Text = html.ToString();
-//      //Si tiene masterPage busca el div en dicha masterpage
-//      if (tieneMasterPage){
-//         divNotifications = ( System.Web.UI.HtmlControls.HtmlGenericControl) pagina.Master.FindControl("divNotifications");
-//   }else{
-//         divNotifications = ( System.Web.UI.HtmlControls.HtmlGenericControl)pagina.FindControl("divNotifications");
-//}
+     public static Nullable<double> valD(string textNumber)
+      {
+          Double? r = null;
+          try
+          {
+              if (IsNumeric(textNumber))
+              {
+                  r = double.Parse(textNumber);
+              }
+              else
+              {
+                  r = null;
+              }
+              return r;
+          }
+          catch (Exception ex)
+          {
 
-//      divNotifications.Controls.Add(control);
-//}
+              throw ex;
+          }
+      }
+
+     public static Nullable<short> valSh(string textNumber)
+      {
+          short? r = null;
+          try
+          {
+              if (IsNumeric(textNumber))
+              {
+                  r = short.Parse(textNumber);
+              }
+              else
+              {
+                  r = null;
+              }
+              return r;
+          }
+          catch (Exception ex)
+          {
+
+              throw ex;
+          }
+      }
+     public static Nullable<DateTime > valDate(string textDate)
+     {
+         DateTime? r = null;
+         try
+         {
+             if (isDate(textDate))
+             {
+                 r = DateTime.Parse(textDate);
+             }
+             else
+             {
+                 r = null;
+             }
+             return r;
+         }
+         catch (Exception ex)
+         {
+
+             throw ex;
+         }
+     }
 
 
 }//end class

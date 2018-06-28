@@ -1,1 +1,141 @@
 15/06/2018 7:51:40,forastero,   en vistas_pacBasales.btnPrueba_Click(Object sender, EventArgs e) en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 18,btnPrueba,Error:Prueba de excepcion-btnPrueba_Click
+20/06/2018 16:34:04,forastero,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 23,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal
+21/06/2018 08:25:47,forastero,   en ClsCombos.fill(String tabla, Boolean seleccione) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsCombos.cs:línea 29
+   en vistas_pacBasales.cargarcombos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 47,cargarCombos,Error:Sintaxis incorrecta cerca de 'ALLSELECT'.-fill
+21/06/2018 08:26:19,forastero,   en ClsCombos.fill(String tabla, Boolean seleccione) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsCombos.cs:línea 29
+   en vistas_pacBasales.cargarcombos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 47,cargarCombos,Error:El nombre de columna 'id' no es válido.
+El nombre de columna 'nombre' no es válido.-fill
+21/06/2018 09:15:38,forastero,   en vistas_pacBasales.confCombo(DropDownList combo, String tabla, String condicion, Boolean seleccione, String dataField, String textField) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 90
+   en vistas_pacBasales.cargarcombos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 61,cargarCombos,Error:El nombre de columna 'id' no es válido.
+El nombre de columna 'nombre' no es válido.-confCombo
+21/06/2018 10:18:56,forastero,   en vistas_pacBasales.confCombo(DropDownList combo, String tabla, String condicion, Boolean seleccione, String dataField, String textField) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 126
+   en vistas_pacBasales.cargarcombos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 56,cargarCombos,Error:Sintaxis incorrecta cerca de '='.-confCombo
+21/06/2018 10:21:31,forastero,   en vistas_pacBasales.confCombo(DropDownList combo, String tabla, String condicion, Boolean seleccione, String dataField, String textField) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 126
+   en vistas_pacBasales.cargarcombos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 56,cargarCombos,Error:Sintaxis incorrecta cerca de '='.-confCombo
+21/06/2018 10:23:37,forastero,   en vistas_pacBasales.confCombo(DropDownList combo, String tabla, String condicion, Boolean seleccione, String dataField, String textField) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 126
+   en vistas_pacBasales.cargarcombos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 56,cargarCombos,Error:Sintaxis incorrecta cerca de '='.-confCombo
+21/06/2018 15:59:08,forastero,   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 46,btnGrabar_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-btnGrabar_Click
+21/06/2018 16:06:41,forastero,   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 116,btnGrabar_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-btnGrabar_Click
+21/06/2018 16:19:09,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 16:36:06,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 16:39:20,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 16:51:52,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 16:55:17,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 16:56:03,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 16:57:58,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 16:59:20,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:La función o el procedimiento SPPACBASALESIU tiene demasiados argumentos.-grabar
+21/06/2018 17:01:44,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 163
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PPaisResidencia', que no se ha especificado.-grabar
+21/06/2018 17:07:11,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 164
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 17:10:58,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 165
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 17:26:37,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 177
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-grabar
+21/06/2018 17:27:38,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 177
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:El procedimiento o la función 'SPPACBASALESIU' esperaba el parámetro '@PPaisResidencia', que no se ha especificado.-grabar
+21/06/2018 17:37:00,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 166
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-grabar
+21/06/2018 17:38:16,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 166
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-grabar
+21/06/2018 17:50:44,Ardani,   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 53,btnGrabar_Click,Error:La conversión especificada no es válida.-btnGrabar_Click
+21/06/2018 17:51:11,Ardani,   en ClsPacBasales.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 166
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 120,btnGrabar_Click,Error:Instrucción UPDATE en conflicto con la restricción FOREIGN KEY "PAC_BASALES_FK03". El conflicto ha aparecido en la base de datos "DBMANGUAPEDIATRICO", tabla "dbo.M_MUNICIPIO", column 'Id'.
+Se terminó la instrucción.-grabar
+21/06/2018 21:41:47,Ardani,   en vistas_pacBasales.cargarDatosPaciente(String idPaciente) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 707
+   en vistas_pacBasales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 24,load,Error:La columna 'Genero' no pertenece a la tabla .-cargarDatosPaciente
+21/06/2018 21:44:58,Ardani,   en vistas_pacBasales.cargarDatosPaciente(String idPaciente) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 707
+   en vistas_pacBasales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 24,load,Error:La columna 'Medicos' no pertenece a la tabla .-cargarDatosPaciente
+22/06/2018 08:26:52,Ardani,   en ClsPacBasales.validacionesDB() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 227
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 130,btnGrabar_Click,Error:El procedimiento o la función 'SPValidacionesPacBasales' esperaba el parámetro '@PExpedienteHR', que no se ha especificado.-validacionesDB
+22/06/2018 08:29:55,Ardani,   en ClsPacBasales.validacionesDB() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsPacBasales.cs:línea 229
+   en vistas_pacBasales.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\pacBasales.aspx.cs:línea 130,btnGrabar_Click,Error:El procedimiento o la función 'SPValidacionesPacBasales' esperaba el parámetro '@PSegundoNombre', que no se ha especificado.-validacionesDB
+22/06/2018 12:58:58,forastero,   en vistas_security.btnGrabarRoles_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\security.aspx.cs:línea 49,btnGrabarRoles_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-btnGrabarRoles_Click
+25/06/2018 20:39:44,Ardani,   en vistas_security.btnGrabarUsuarios_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\security.aspx.cs:línea 350,btnGrabarUsuarios_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-btnGrabarUsuarios_Click
+25/06/2018 20:43:44,Ardani,   en ClsUsuario.getById(Int32 id) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsUsuario.cs:línea 69
+   en vistas_security.lnkEditUsuario_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\security.aspx.cs:línea 309,lnkEditUsuario_Click,Error:El procedimiento o la función 'SPUsuarioGetByID' esperaba el parámetro '@PidUsuario', que no se ha especificado.-getById
+27/06/2018 20:01:36,forastero,   en vistas_inicio.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 87
+   en vistas_inicio.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 16,Page_Load,Error:Subproceso anulado.-asignarPermisos
+27/06/2018 20:04:44,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:04:44,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 20:46:05,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:46:05,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 20:46:14,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:46:14,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 20:48:40,forastero,   en ClsValidaAcceso.login(String usuario, String contrasena) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\ClsValidaAcceso.cs:línea 67
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 41,btnLogin_Click,Error:ExecuteReader: no se ha inicializado la propiedad CommandText-login
+27/06/2018 20:48:41,forastero,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 432,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:19:54,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:19:54,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:20:54,forastero,   en vistas_inicio.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 87
+   en vistas_inicio.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 16,Page_Load,Error:Subproceso anulado.-asignarPermisos
+27/06/2018 21:21:01,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:21:01,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:21:17,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:21:29,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:22:02,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:35:59,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:36:00,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+27/06/2018 21:37:50,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+27/06/2018 21:37:50,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+28/06/2018 14:26:55,forastero,   en vistas_pacBasales.asignarPermisos() en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 749
+   en vistas_pacBasales.Page_Load(Object sender, EventArgs e) en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 20,load,Error:Subproceso anulado.-asignarPermisos

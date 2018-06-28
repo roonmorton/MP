@@ -69,3 +69,13 @@
 .campoSoloLectura{
     background-color:#81c784 !important;
 }
+
+.centrar{position:relative;
+         margin:auto;
+         float:none;
+         }
+
+.width100
+{
+   width:100% !important;
+   }
