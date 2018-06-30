@@ -1,10 +1,10 @@
 USE DBMANGUAPEDIATRICO
 GO
-ALTER TABLE PAC_BAJA
+ALTER TABLE PAC_MADRE
 ADD usuarioCreacion VARCHAR(100)
 , fechaCreacion DATETIME DEFAULT(GETDATE())
 ,usuarioModificacion VARCHAR(100)
-,--fechaModificacion DATETIME
+,fechaModificacion DATETIME
 
 go
 

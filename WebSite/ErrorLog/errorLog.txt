@@ -139,3 +139,31 @@ Se terminó la instrucción.-grabar
 27/06/2018 21:37:50,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
 28/06/2018 14:26:55,forastero,   en vistas_pacBasales.asignarPermisos() en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 749
    en vistas_pacBasales.Page_Load(Object sender, EventArgs e) en c:\gitRepos\MP\WebSite\vistas\pacBasales.aspx.cs:línea 20,load,Error:Subproceso anulado.-asignarPermisos
+29/06/2018 22:40:22,forastero,   en vistas_datosMadre.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\datosMadre.aspx.cs:línea 195
+   en vistas_datosMadre.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\datosMadre.aspx.cs:línea 16,Page_Load,Error:Subproceso anulado.-asignarPermisos
+29/06/2018 22:40:43,forastero,   en vistas_datosMadre.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\datosMadre.aspx.cs:línea 195
+   en vistas_datosMadre.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\datosMadre.aspx.cs:línea 16,Page_Load,Error:Subproceso anulado.-asignarPermisos
+29/06/2018 22:41:26,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+29/06/2018 22:41:26,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+29/06/2018 22:45:05,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+29/06/2018 22:45:05,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+29/06/2018 22:46:28,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+29/06/2018 22:47:58,aramirez,   en vistas_datosMadre.btnGrabar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\datosMadre.aspx.cs:línea 107,btnGrabar_Click,Error:La conversión especificada no es válida.-btnGrabar_Click

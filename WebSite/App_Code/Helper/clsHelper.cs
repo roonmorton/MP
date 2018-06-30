@@ -528,5 +528,51 @@ using System.Web.Script.Serialization;
          }
      }
 
+     public static Nullable<int> getValueI(DropDownList cbo)
+     {
+         int? r;
+         try
+         {
+             if (clsHelper.IsNumeric(cbo.SelectedValue.ToString()))
+             {
+                 r = Convert.ToInt32(cbo.SelectedValue.ToString());
+             }
+             else
+             {
+                 r = null;
+             }
+             return r;
+         }
+         catch (Exception ex)
+         {
+
+             throw ex;
+         }
+
+     }
+
+     public static Nullable<short> getValueS(DropDownList cbo)
+     {
+         short? r;
+         try
+         {
+             if (clsHelper.IsNumeric(cbo.SelectedValue.ToString()))
+             {
+                 r = short.Parse(cbo.SelectedValue.ToString());
+             }
+             else
+             {
+                 r = null;
+             }
+             return r;
+         }
+         catch (Exception ex)
+         {
+
+             throw ex;
+         }
+
+     }
+
 
 }//end class

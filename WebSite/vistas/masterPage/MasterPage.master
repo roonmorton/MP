@@ -400,7 +400,7 @@ Fin tareas Pendientes-->
                         </a>
                         <ul class="treeview-menu">
                             <li class="active"><a href="/vistas/pacBasales.aspx"><i class="fa fa-circle-o"></i>Datos basales</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Datos VIH de la madre</a></li>
+                            <li><a href="/vistas/datosMadre.aspx"><i class="fa fa-circle-o"></i>Datos VIH de la madre</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
