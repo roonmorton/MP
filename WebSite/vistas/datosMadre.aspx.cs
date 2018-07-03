@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,6 +16,10 @@ public partial class vistas_datosMadre : System.Web.UI.Page
             {
                 asignarPermisos();
                 cargarCombos();
+                if (Session["idPaciente"] != null)
+                {
+                    cargarDatosMadre();
+                }
             }
         }
         catch (Exception ex)
@@ -104,7 +109,7 @@ public partial class vistas_datosMadre : System.Web.UI.Page
                 clsHelper.mensaje("En este momento no se puede continuar, por favor reinicie el browser", this, clsHelper.tipoMensaje.alerta);
                 return;
             }
-            m.idPaciente = (int)Session["idPaciente"];
+            m.idPaciente =int.Parse(Session["idPaciente"].ToString());
             m.fechaTomaDatos = DateTime.Parse(txtFechaTomaDatos.Text);
             m.MadrePositiva = short.Parse(cboMadrePositiva.SelectedValue);
             m.NHC = txtNHC.Text;
@@ -141,11 +146,11 @@ public partial class vistas_datosMadre : System.Web.UI.Page
         try
         {
             ClsPacMadre m = new ClsPacMadre();
-            m = m.seleccionar((int)Session["idPaciente"]);
-            txtFechaTomaDatos.Text = m.fechaTomaDatos.ToString();
+            m = m.seleccionar(int.Parse(Session["idPaciente"].ToString()));
+            txtFechaTomaDatos.Text = clsHelper.dateFormat(m.fechaTomaDatos.ToString());
             cboMadrePositiva.SelectedValue = m.MadrePositiva.ToString();
             txtNHC.Text = m.NHC;
-            txtFechaDx.Text = m.FechaDX.ToString();
+            txtFechaDx.Text = clsHelper.dateFormat(m.FechaDX.ToString());
             cboMomentoDx.SelectedValue = m.MomentoDX.ToString();
             cboSeguimiento.SelectedValue = m.Seguimiento.ToString();
             cboLugarSeguimiento.SelectedValue = m.LugarSeguimiento.ToString();

@@ -587,7 +587,7 @@ public partial class vistas_pacBasales : System.Web.UI.Page
             txtSegundoNombre.Text = dt.Rows[0]["SegundoNombre"].ToString();
             txtPrimerApellido.Text = dt.Rows[0]["PrimerApellido"].ToString();
             txtSegundoApellido.Text = dt.Rows[0]["SegundoApellido"].ToString();
-            txtFechaNacimiento.Text = dt.Rows[0]["FechaNacimiento"].ToString();
+            txtFechaNacimiento.Text = clsHelper.dateFormat(  dt.Rows[0]["FechaNacimiento"].ToString());
             calcularEdad();
             rbGenero.SelectedValue = dt.Rows[0]["idGenero"].ToString();
             cboPaisresidencia.SelectedValue  = dt.Rows[0]["PaisResidencia"].ToString();
@@ -601,7 +601,7 @@ public partial class vistas_pacBasales : System.Web.UI.Page
             cboEscolaridad.SelectedValue = dt.Rows[0]["NivelEducativo"].ToString();
             cboIdioma.SelectedValue = dt.Rows[0]["ComunidadLinguistica"].ToString();
             cboEtnia.SelectedValue = dt.Rows[0]["Etnia"].ToString();
-            txtFechaPrimeraVisita.Text =   dt.Rows[0]["Fecha1Visita"].ToString();
+            txtFechaPrimeraVisita.Text =   clsHelper.dateFormat(dt.Rows[0]["Fecha1Visita"].ToString());
             cboAtendidoEn.SelectedValue = dt.Rows[0]["AtendidoEn"].ToString();
             cboNacimientoPor.SelectedValue = dt.Rows[0]["NacimientoPor"].ToString();
             cboAztMadre.SelectedValue = dt.Rows[0]["AZTIVMadre"].ToString();
@@ -652,12 +652,12 @@ public partial class vistas_pacBasales : System.Web.UI.Page
             }
 
             cboPositivoConfirmado.SelectedValue = dt.Rows[0]["PositivoConfirmado"].ToString();
-            txtFechaPositivoConfirmado.Text = dt.Rows[0]["FechaPositivoConfirmado"].ToString();
+            txtFechaPositivoConfirmado.Text = clsHelper.dateFormat( dt.Rows[0]["FechaPositivoConfirmado"].ToString());
             cboMetodoDx.SelectedValue = dt.Rows[0]["MetodoDX"].ToString();
             cboViaInfeccion.SelectedValue = dt.Rows[0]["ViaInfeccion"].ToString();
             cboTargaPrevio.SelectedValue = dt.Rows[0]["TARGAPrevio"].ToString();
             txtCualTargaPrevio.Text = dt.Rows[0]["CualTARGAPREVIO"].ToString();
-            txtFechaInicioTarga.Text = dt.Rows[0]["FechaInicio"].ToString();
+            txtFechaInicioTarga.Text = clsHelper.dateFormat(dt.Rows[0]["FechaInicio"].ToString());
             cboTARGASuspendido.SelectedValue = dt.Rows[0]["Suspendido"].ToString();
             txtMotivoSuspension.Text = dt.Rows[0]["MotivoSuspension"].ToString();
             cboVidaSexual.SelectedValue = dt.Rows[0]["VidaSexual"].ToString();

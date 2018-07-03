@@ -44,7 +44,7 @@ public class ClsPacMadre
         try
         {
             ClsDb db = new ClsDb();
-            db.ejecutarSP("", null
+            db.ejecutarSP("SPPACMADREIU", null
                 , db.parametro("@PidPaciente", this.idPaciente)
                 , db.parametro("@PMadrePositiva", this.MadrePositiva)
                 , db.parametro("@PNHC", this.NHC)
@@ -87,26 +87,26 @@ public class ClsPacMadre
             if (dt.Rows.Count > 0)
             {
                 r.idPaciente = (int)dt.Rows[0]["idPaciente"];
-                r.MadrePositiva = (short)dt.Rows[0]["MadrePositiva"];
+                r.MadrePositiva = short.Parse(dt.Rows[0]["MadrePositiva"].ToString());
                 r.NHC = dt.Rows[0]["nhc"].ToString();
-                r.FechaDX = (DateTime)dt.Rows[0]["fechaDX"];
-                r.MomentoDX = (int)dt.Rows[0]["momentoDX"];
-                r.Seguimiento = (short)dt.Rows[0]["seguimiento"];
-                r.LugarSeguimiento = (int)dt.Rows[0]["lugarSeguimiento"];
+                r.FechaDX = clsHelper.valDate( dt.Rows[0]["fechaDX"].ToString());
+                r.MomentoDX =clsHelper.valI( dt.Rows[0]["momentoDX"].ToString());
+                r.Seguimiento = clsHelper.valSh(dt.Rows[0]["seguimiento"].ToString());
+                r.LugarSeguimiento = clsHelper.valI( dt.Rows[0]["lugarSeguimiento"].ToString());
                 r.OtroLugarSeguimiento = dt.Rows[0]["otroLugarSeguimiento"].ToString();
-                r.ControlPrenatal = (short)dt.Rows[0]["controlPrenatal"];
-                r.lugarControlPrenatal = (int)dt.Rows[0]["lugarControlPrenatal"];
+                r.ControlPrenatal =  clsHelper.valSh( dt.Rows[0]["controlPrenatal"].ToString());
+                r.lugarControlPrenatal = clsHelper.valI( dt.Rows[0]["lugarControlPrenatal"].ToString());
                 r.ComplicacionesEmbarazo = dt.Rows[0]["complicacionesEmbarazo"].ToString();
-                r.TARGAEmbarazo = (short)dt.Rows[0]["TARGAEmbarazo"];
-                r.EsquemaTARGA = (int)dt.Rows[0]["EsquemaTARGA"];
-                r.MomentoInicioTARGA = (int)dt.Rows[0]["momentoInicioTARGA"];
-                r.adherenciaTARGA = (int)dt.Rows[0]["adherenciaTARGA"];
-                r.UltimaCV = (double)dt.Rows[0]["ultimaCV"];
-                r.UltimoCD4 = (double)dt.Rows[0]["ultimoCD4"];
-                r.EdadGestacionalUltimaCVCD4 = (int)dt.Rows[0]["EdadGestacionalUltimaCVCD4"];
-                r.infeccionOportunista = (int)dt.Rows[0]["infeccionOportunista"];
-                r.clasificacionClinicaInmunologica = (int)dt.Rows[0]["clasificacionClinicaInmunologica"];
-                r.fechaTomaDatos = (DateTime)dt.Rows[0]["fechaTomaDatos"];
+                r.TARGAEmbarazo =  clsHelper.valSh( dt.Rows[0]["TARGAEmbarazo"].ToString());
+                r.EsquemaTARGA =clsHelper.valI( dt.Rows[0]["EsquemaTARGA"].ToString());;
+                r.MomentoInicioTARGA = clsHelper.valI( dt.Rows[0]["momentoInicioTARGA"].ToString());;
+                r.adherenciaTARGA = clsHelper.valI( dt.Rows[0]["adherenciaTARGA"].ToString());;
+                r.UltimaCV = clsHelper.valD(  dt.Rows[0]["ultimaCV"].ToString());
+                r.UltimoCD4 = clsHelper.valD( dt.Rows[0]["ultimoCD4"].ToString());
+                r.EdadGestacionalUltimaCVCD4 = clsHelper.valI( dt.Rows[0]["EdadGestacionalUltimaCVCD4"].ToString());
+                r.infeccionOportunista = clsHelper.valI(dt.Rows[0]["infeccionOportunista"].ToString());
+                r.clasificacionClinicaInmunologica = clsHelper.valI( dt.Rows[0]["clasificacionClinicaInmunologica"].ToString());
+                r.fechaTomaDatos = clsHelper.valDate( dt.Rows[0]["fechaTomaDatos"].ToString());
             }
             return r;
         }

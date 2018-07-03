@@ -574,5 +574,19 @@ using System.Web.Script.Serialization;
 
      }
 
+     public static string dateFormat(string fecha) {
+         string s = string.Empty;
+         try
+         {
+            s= clsHelper.isDate( fecha)?Convert.ToDateTime(fecha).ToString("dd/MM/yyyy"):string.Empty;
+            return s;
+         }
+         catch (Exception ex)
+         {
+             
+             throw ex;
+         }
+     }
+
 
 }//end class
