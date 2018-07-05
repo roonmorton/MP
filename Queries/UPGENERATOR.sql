@@ -23,7 +23,7 @@ BEGIN
 	BEGIN
 		SET @Vout = N'CREATE PROCEDURE SPIU '+CHAR(13)+CHAR(10)			
 	
-
+	
 		DECLARE Ccol CURSOR FOR 
 		SELECT columna,tipo,longitud,precision,escala,pk,nulable
 		FROM @VTblColumns
@@ -52,7 +52,7 @@ BEGIN
 		SET @Vout = SUBSTRING(@Vout,1,LEN(@Vout)-1)	
 
 		SET @Vout+='AS'+CHAR(13)+CHAR(10) 
-		SET @Vout+='BEGIN'+CHAR(13)+CHAR(10)+CHAR(9)
+		SET @Vout+='BEGIN'+CHAR(13)+CHAR(10)+CHAR(9) 
 			SET @Vout+='IF NOT EXISTS(SELECT  1 FROM '+ @PNombreTabla + ' WHERE ' + @VKey +' = @P'+ @Vkey +')'+CHAR(13)+CHAR(10)+CHAR(9)
 			SET @Vout+='BEGIN'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 				SET @Vout+='INSERT ' + @PNombreTabla + '('+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)	
@@ -242,13 +242,14 @@ BEGIN
 		SET @Vout +='}'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9) -- END void eliminar
 
 		--Método seleccionar por id
-		SET @Vout +='public void seleccionarPorId(int ' +@VKey +'){'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
+		SET @Vout +='public Cls' + @PNombreTabla + ' seleccionarPorId(int ' +@VKey +'){'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 		SET @Vout +='try{'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 		SET @Vout +='Cls'+@PNombreTabla + ' r = new Cls'+@PNombreTabla+'();'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 		SET @Vout +='DataTable dt = new DataTable();'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 		SET @Vout+='dt = db.dataTableSP("SPSELECT", null, db.parametro("@P' +@VKey + '", '+ @VKey +'));'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
         SET @Vout+='if (dt.Rows.Count > 0)' +CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)+CHAR(9)
         SET @Vout+='{'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)+CHAR(9)+CHAR(9) --inicio si hay registros
+		
 				DECLARE Ccol CURSOR FOR 
 				SELECT columna,tipo,longitud,precision,escala,pk,nulable
 				FROM @VTblColumns
@@ -257,24 +258,38 @@ BEGIN
 				WHILE @@FETCH_STATUS=0
 				BEGIN
 					--Inicio del Recorrido
-					IF @Vtipo IN('varchar','char','nvarchar') 
+					IF @Vtipo =('varchar') 
 					BEGIN
-						SET @Vout+='r.' + @Vcolumna + ' = dt.Rows[0]["'+@Vcolumna+'"].ToString();'
+					print @Vcolumna + ' ' + @Vtipo
+				
+						SET @Vout+='r.' + @Vcolumna + ' = dt.Rows[0]["'+@Vcolumna+'"].ToString();' 
 						SET @Vout += CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 					END
 					ELSE
 					BEGIN
-						SET @Vout+='r.' + @Vcolumna + '=('+   +CASE @Vtipo
-											 WHEN 'int' THEN 'int'
-											 WHEN 'varchar' THEN 'string'
-											 WHEN 'char' THEN 'string'
-											 WHEN 'date' THEN 'DateTime'
-											 WHEN 'datetime' THEN 'DateTime'
-											 WHEN 'decimal' THEN 'Double'
-											 WHEN 'bit' THEN 'Boolean'
-											 WHEN 'tinyint' THEN 'short'
-											 END + ')dt.Rows[0]["'+@Vcolumna+'"];'	
+						IF @Vtipo IN ('float','decimal')
+						BEGIN
+							SET @Vout+='r.' + @Vcolumna + ' = clsHelper.valD( dt.Rows[0]["'+@Vcolumna+'"].ToString());' 
+						END
+						ELSE IF @Vtipo = 'int'
+						BEGIN
+							SET @Vout+='r.' + @Vcolumna + ' = clsHelper.valI( dt.Rows[0]["'+@Vcolumna+'"].ToString());' 
+						END
+						ELSE IF @Vtipo = 'short'
+						BEGIN
+							SET @Vout+='r.' + @Vcolumna + ' = clsHelper.valSh( dt.Rows[0]["'+@Vcolumna+'"].ToString());' 
+						END
+						ELSE IF @Vtipo = 'bit'
+						BEGIN
+							SET @Vout+='r.' + @Vcolumna + ' = clsHelper.valB( dt.Rows[0]["'+@Vcolumna+'"].ToString());' 
+						END
+						ELSE IF @Vtipo IN('date','datetime')
+						BEGIN
+							SET @Vout+='r.' + @Vcolumna + ' = clsHelper.valDate( dt.Rows[0]["'+@Vcolumna+'"].ToString());' 
+						END
+						
 						SET @Vout += CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)	
+						
 					END
 					--Final del recorrido
 				FETCH Ccol INTO @Vcolumna,@Vtipo,@Vlongitud,@Vprecision,@Vescala,@Vpk,@Vnulable
@@ -290,7 +305,7 @@ BEGIN
 		SET @Vout +='}'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9) -- END void seleccionar por id
 
 		--Método seleccionar
-		SET @Vout +='public DataTable seleccionarPorId(int ' +@VKey +'){'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
+		SET @Vout +='public DataTable seleccionarTodos(int ' +@VKey +'){'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 		SET @Vout +='try{'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 		SET @Vout +='DataTable dt = new DataTable();'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)
 		SET @Vout+='dt = db.dataTableSP("SPSELECT", null, db.parametro("@P'+ @VKey+'", '+ @VKey +'));'+CHAR(13)+CHAR(10)+CHAR(9)+CHAR(9)

@@ -412,7 +412,7 @@ Fin tareas Pendientes-->
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Signos Vitales</a></li>
+                            <li><a href="/vistas/signosVitales.aspx"><i class="fa fa-circle-o"></i>Signos Vitales</a></li>
                             <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i>Síntomas</a></li>
 
                                  <li>

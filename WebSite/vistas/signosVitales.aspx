@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-   <div class="row">
+    <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-12">
          <div class="form-group">
             <label>
@@ -15,7 +15,7 @@
       <div class="col-lg-4 col-md-4 col-sm-12">
          <div class="form-group">
             <label>
-               Tipo de visita</label>
+               Tipo de visita (*)</label>
             <asp:DropDownList runat="server" ID="cboTipoVisita">
             </asp:DropDownList>
          </div>
@@ -140,7 +140,7 @@
    </div>
    <div class="row">
       <div class="col-lg-2">
-      <asp:LinkButton runat="server" id="lnkNuevo" CssClass="btn btn-warning width100">Nueva Visita</asp:LinkButton>
+      <asp:LinkButton runat="server" id="lnkNuevo" CssClass="btn btn-warning width100" OnClick="lnkNuevo_Click">Nueva Visita</asp:LinkButton>
       </div>
       <div class="col-lg-2">
       </div>
@@ -149,10 +149,10 @@
       <div class="col-lg-2">
       </div>
       <div class="col-lg-2">
-       <asp:LinkButton runat="server" ID="lnkGuardar" CssClass="btn btn-primary width100" >Guardar</asp:LinkButton>
+       <asp:LinkButton runat="server" ID="lnkGuardar" CssClass="btn btn-primary width100" OnClick="lnkGuardar_Click" >Guardar</asp:LinkButton>
       </div>
       <div class="col-lg-2">
-         <asp:LinkButton runat="server" ID="lnkCerrar" CssClass="btn btn-danger width100">Cerrar</asp:LinkButton>
+         <asp:LinkButton runat="server" ID="lnkCerrar" CssClass="btn btn-danger width100" OnClick="lnkCerrar_Click">Cerrar</asp:LinkButton>
       </div>
    </div>
    <div class="row">

@@ -444,3 +444,104 @@ Se terminó la instrucción.-grabar
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    en System.Web.HttpResponse.Redirect(String url)
    en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:01:35,forastero,   en vistas_signosVitales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 214
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+4/07/2018 23:01:59,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:01:59,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+4/07/2018 23:05:55,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:05:55,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+4/07/2018 23:07:29,aramirez,   en vistas_signosVitales.lnkGuardar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 118,lnkGuardar_Click,Error:Referencia a objeto no establecida como instancia de un objeto.-lnkGuardar_Click
+4/07/2018 23:10:05,forastero,   en vistas_signosVitales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 220
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+4/07/2018 23:10:14,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:10:14,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+4/07/2018 23:10:22,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 101,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:10:30,aramirez,   en vistas_signosVitales.cargarExistentes() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 237
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 21,Load,Error:La conversión especificada no es válida.-cargarExistentes
+4/07/2018 23:13:46,aramirez,   en vistas_signosVitales.cargarExistentes() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 237
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 21,Load,Error:La conversión especificada no es válida.-cargarExistentes
+4/07/2018 23:15:17,forastero,   en vistas_signosVitales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 220
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+4/07/2018 23:15:31,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:15:31,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+4/07/2018 23:15:40,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 36,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:17:29,aramirez,   en vistas_signosVitales.cargarExistentes() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 237
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 21,Load,Error:El procedimiento o la función 'SPSignosVitalesSSELECT' esperaba el parámetro '@PIdPaciente', que no se ha especificado.-cargarExistentes
+4/07/2018 23:18:33,forastero,   en System.Threading.Monitor.ReliableEnter(Object obj, Boolean& lockTaken)
+   en System.Threading.Monitor.Enter(Object obj, Boolean& lockTaken)
+   en System.Web.SessionState.SessionStateItemCollection.DeserializeItem(String name, Boolean check)
+   en System.Web.SessionState.SessionStateItemCollection.get_Item(String name)
+   en System.Web.SessionState.HttpSessionStateContainer.get_Item(String name)
+   en System.Web.SessionState.HttpSessionState.get_Item(String name)
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 19,Load,Error:Subproceso anulado.-ReliableEnter
+4/07/2018 23:19:29,forastero,   en vistas_signosVitales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 220
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+4/07/2018 23:19:46,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:19:46,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+4/07/2018 23:19:54,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 36,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:23:16,aramirez,   en vistas_signosVitales.lnkGuardar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 124,lnkGuardar_Click,Error:La conversión especificada no es válida.-lnkGuardar_Click
+4/07/2018 23:23:37,forastero,   en vistas_signosVitales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 220
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+4/07/2018 23:23:43,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+4/07/2018 23:23:43,aramirez,   en clsHelper.mostrarError(String metodo, Exception ex, Page pagina, Boolean tieneMasterPage) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\Helper\clsHelper.cs:línea 436,btnLogin_Click,Error:Referencia a objeto no establecida como instancia de un objeto. - MasterHelperMostrarError-  
+4/07/2018 23:23:50,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 36,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal
