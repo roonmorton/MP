@@ -1,44 +1,42 @@
-DECLARE @PIdPaciente int = 3
-
-DECLARE @Vanios int=0,@Vmeses int=0,@Vdias int=0
-DECLARE @VFechaNacimiento DATE = (SELECT FechaNacimiento FROM PAC_BASALES WHERE IdPaciente = @PIdPaciente);
-SELECT @VFechaNacimiento = '31/01/1987'
-DECLARE @VDiaNacimiento INT = DAY(@VFechaNacimiento)
-DECLARE @VMesNacimiento INT = MONTH(@VFechaNacimiento)
-DECLARE @VAnioNacimiento INT = YEAR(@VFechaNacimiento)
-
-
---SELECT DATEDIFF(YEAR,@VFechaNacimiento,getdate()) "edadyy",
---DATEDIFF(MONTH,@VFechaNacimiento,getdate())%12 "edadmm",
---DATEPART(DAY, getdate()) - DATEPART(DAY, @VFechaNacimiento) "edaddd"
-
-
-
-
-
-
-SET @Vanios=FLOOR(CONVERT(FLOAT,DATEDIFF(DAY,@VFechaNacimiento,GETDATE()))/365.25)
-IF MONTH(GETDATE()) <> MONTH(@VFechaNacimiento)
+CREATE PROCEDURE SPObtenerEdad 
+@PIdPaciente int  
+,@PFechaVisita DATE   
+AS
 BEGIN
-	SET @Vmeses = DATEDIFF(MONTH,@VFechaNacimiento,GETDATE())%12
-	IF DAY(@VFechaNacimiento)>DAY(GETDATE())
+	DECLARE @Vanios int=0,@Vmeses int=0,@Vdias int=0
+	DECLARE @VFechaNacimiento DATE = (SELECT FechaNacimiento FROM PAC_BASALES WHERE IdPaciente = @PIdPaciente);
+	--SELECT @VFechaNacimiento = '31/01/1987'
+	DECLARE @VDiaNacimiento INT = DAY(@VFechaNacimiento)
+
+
+	SET @Vanios=FLOOR(CONVERT(FLOAT,DATEDIFF(DAY,@VFechaNacimiento,@PFechaVisita))/365.25)
+	IF MONTH(@PFechaVisita) <> MONTH(@VFechaNacimiento)
 	BEGIN
-		SET @Vmeses-=1
-		SET @Vdias =DATEDIFF(DAY
-							, CAST(CAST(DAY(@VFechaNacimiento) AS varchar)+'/'+  CAST(MONTH(GETDATE())-1 AS varchar) +'/'+  CAST(YEAR(GETDATE()) AS varchar) AS DATETIME) 
-							,GETDATE())
+		SET @Vmeses = DATEDIFF(MONTH,@VFechaNacimiento,@PFechaVisita)%12
+		/*Si el día de nacimiento  es mayor que el ultimo dia del mes a evaluar, por ejemplo dia 31 en feb*/
+		DECLARE @VultimodiaMes INT  = DAY(DATEADD(month, ((YEAR(@PFechaVisita)  - 1900) * 12) + (MONTH(@PFechaVisita)-1), -1))
+		IF @VultimodiaMes < DAY(@VFechaNacimiento)
+		BEGIN			
+			SET	@VDiaNacimiento = @VultimodiaMes	
+		END
+
+		IF DAY(@VFechaNacimiento)>DAY(@PFechaVisita)
+		BEGIN
+			SET @Vmeses-=1
+												
+			SET @Vdias =DATEDIFF(DAY
+							, CAST(CAST(@VDiaNacimiento AS varchar)+'/'+  CAST(MONTH(@PFechaVisita)-1 AS varchar) +'/'+  CAST(YEAR(@PFechaVisita) AS varchar) AS DATETIME) 
+							,@PFechaVisita)
+				
+		END
+		ELSE
+		BEGIN
+			SET @Vdias =DATEDIFF(DAY
+								, CAST(CAST(@VDiaNacimiento AS varchar)+'/'+  CAST(MONTH(GETDATE()) AS varchar) +'/'+  CAST(YEAR(GETDATE()) AS varchar) AS DATETIME) 
+								,GETDATE())
+		END
 	END
-	ELSE
-	BEGIN
-		SET @Vdias =DATEDIFF(DAY
-							, CAST(CAST(DAY(@VFechaNacimiento) AS varchar)+'/'+  CAST(MONTH(GETDATE()) AS varchar) +'/'+  CAST(YEAR(GETDATE()) AS varchar) AS DATETIME) 
-							,GETDATE())
-	END
+
+
+	SELECT @Vanios anios,@Vmeses meses,@Vdias dias
 END
-
-SELECT CAST(CAST(DAY(@VFechaNacimiento) AS varchar)+'/'+  CAST(MONTH(GETDATE())-1 AS varchar) +'/'+  CAST(YEAR(GETDATE()) AS varchar) AS DATETIME)new
-
-
-SELECT @VFechaNacimiento,@Vanios anios,@Vmeses meses,@Vdias dias
-
-

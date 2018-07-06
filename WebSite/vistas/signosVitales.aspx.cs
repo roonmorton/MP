@@ -22,6 +22,11 @@ public partial class vistas_signosVitales : System.Web.UI.Page
                 }
 
             }
+
+            if (!string.IsNullOrEmpty(Request.Params["__EVENTTARGET"]))
+            {
+                validFields(Request.Params["__EVENTTARGET"]);
+            }
         }
         catch (Exception ex)
         {
@@ -91,7 +96,8 @@ public partial class vistas_signosVitales : System.Web.UI.Page
                 return;
             }
 
-            if (string.IsNullOrEmpty(cboTipoVisita.SelectedValue.ToString())) {
+            if (string.IsNullOrEmpty(cboTipoVisita.SelectedValue.ToString()))
+            {
                 clsHelper.mensaje("Seleccione un tipo de visita", this, clsHelper.tipoMensaje.alerta);
                 cboTipoVisita.Focus();
                 return;
@@ -107,8 +113,9 @@ public partial class vistas_signosVitales : System.Web.UI.Page
                 }
             }
 
-            if(Session["idPaciente"] == null){
-                clsHelper.mensaje("Ocurrió un inconveniente, por favor reinicie la aplicación",this,clsHelper.tipoMensaje.err,true);
+            if (Session["idPaciente"] == null)
+            {
+                clsHelper.mensaje("Ocurrió un inconveniente, por favor reinicie la aplicación", this, clsHelper.tipoMensaje.err, true);
             }
 
             if (ViewState["idSignosVitales"] != null)
@@ -119,10 +126,10 @@ public partial class vistas_signosVitales : System.Web.UI.Page
             {
                 sv.IdSignosVitales = null;
             }
-                   
+
 
             sv.IdPaciente = int.Parse(Session["idPaciente"].ToString());
-            sv.FechaVisita =  clsHelper.valDate( txtFechaVisita.Text);
+            sv.FechaVisita = clsHelper.valDate(txtFechaVisita.Text);
             sv.TipoVisita = clsHelper.valI(cboTipoVisita.SelectedValue);
             sv.FechaProximaVisita = clsHelper.valDate(txtFechaProximaVisita.Text);
             sv.PresionArterialSist = clsHelper.valI(txtPmHALeft.Text);
@@ -235,6 +242,111 @@ public partial class vistas_signosVitales : System.Web.UI.Page
         catch (Exception ex)
         {
 
+            throw ex;
+        }
+    }
+    protected void lnkModificar_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (!(Boolean)ViewState["actualizar"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
+          
+            int idSignosVitales;
+            GridViewRow r = (GridViewRow)((Control)(sender)).Parent.Parent;
+            idSignosVitales = int.Parse(((Label)r.FindControl("lblIdSignosVitales")).Text);
+            ViewState["idSignosVitales"] = idSignosVitales;
+            ClsSignosVitales sv = new ClsSignosVitales();
+            sv = sv.seleccionarPorId(idSignosVitales);
+            txtFechaVisita.Text = clsHelper.dateFormat(sv.FechaVisita.ToString());
+            cboTipoVisita.SelectedValue = sv.TipoVisita.ToString();
+            txtFechaProximaVisita.Text = clsHelper.dateFormat(sv.FechaProximaVisita.ToString());
+            txtPmHALeft.Text = sv.PresionArterialSist.ToString();
+            txtPmHARight.Text = sv.PresionArterialDiast.ToString();
+            txtTc.Text = sv.Temperatura.ToString();
+            txtFC.Text = sv.FrecCardiaca.ToString();
+            txtFR.Text = sv.FrecRespiratoria.ToString();
+            txtSat.Text = sv.SaturacionOxigeno.ToString();
+            txtTalla.Text = sv.Talla.ToString();
+            txtPeso.Text = sv.Peso.ToString();
+            txtImc.Text = sv.IMC.ToString();
+            txtEdadAnos.Text = sv.EdadAnos.ToString();
+            txtEdadMeses.Text = sv.EdadMeses.ToString();
+            txtEdadDias.Text = sv.EdadDias.ToString();
+            cboEstadío.SelectedValue = sv.Estadio.ToString();
+        }
+        catch (Exception ex)
+        {
+
+            clsHelper.mostrarError("lnkModificar_Click", ex, this, true);
+        }
+    }
+    protected void lnkEliminar_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (!(Boolean)ViewState["eliminar"])
+            {
+                clsHelper.mensaje("No tiene permiso para realizar esta operación", this, clsHelper.tipoMensaje.alerta);
+                return;
+            }
+
+            int idSignosVitales;
+            GridViewRow r = (GridViewRow)((Control)(sender)).Parent.Parent;
+            idSignosVitales = int.Parse(((Label)r.FindControl("lblIdSignosVitales")).Text);
+            ClsSignosVitales sv = new ClsSignosVitales();
+            sv.eliminar(idSignosVitales);
+            limpiar();
+            cargarExistentes();
+        }
+        catch (Exception ex)
+        {
+
+            clsHelper.mostrarError("lnkModificar_Click", ex, this, true);
+        }
+    }
+
+    void validFields(string idControl)
+    {
+        try
+        {
+            switch (idControl)
+            {
+                case "txtFechaVisita":
+                    calcularEdad();
+                    break;
+            }
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
+
+    void calcularEdad() {
+        try
+        {
+            if (clsHelper.isDate(txtFechaVisita.Text)) {
+                if (Session["idPaciente"] != null) {
+                    DataTable d = new DataTable();
+                    ClsSignosVitales sv = new ClsSignosVitales();
+                    
+                    d = sv.calcularEdad(int.Parse(Session["idPaciente"].ToString()), DateTime.Parse(txtFechaVisita.Text));
+                    if (d.Rows.Count > 0) {
+                        txtEdadAnos.Text = d.Rows[0]["anios"].ToString();
+                        txtEdadMeses.Text = d.Rows[0]["meses"].ToString();
+                        txtEdadDias.Text = d.Rows[0]["dias"].ToString();
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            
             throw ex;
         }
     }

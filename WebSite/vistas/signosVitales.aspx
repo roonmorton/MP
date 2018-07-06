@@ -9,7 +9,7 @@
          <div class="form-group">
             <label>
                Fecha de visita (*)</label>
-            <asp:TextBox ID="txtFechaVisita" CssClass="fecha" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtFechaVisita" CssClass="fecha" runat="server" onblur="javascript:if(this.value!='') __doPostBack('txtFechaVisita','')"></asp:TextBox>
          </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
@@ -158,24 +158,46 @@
    <div class="row">
       <asp:GridView runat="server" ID="grdSignosVitales" AutoGenerateColumns="False" CssClass="table table-bordered table-striped table-hover width100">
          <Columns>
-            <asp:BoundField DataField="IDSignosVitales" HeaderText="ID" />
-            <asp:BoundField HeaderText="Fecha de visita" />
-            <asp:BoundField HeaderText="Tipo de Visita" />
-            <asp:BoundField HeaderText="Peso" />
-            <asp:BoundField HeaderText="Estadío" />
-            <asp:BoundField HeaderText="IMC" />
-            <asp:BoundField HeaderText="Próxima visita" />
+             <asp:TemplateField HeaderText="ID" Visible="False">
+                 <EditItemTemplate>
+                     <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("IDSignosVitales") %>'></asp:TextBox>
+                 </EditItemTemplate>
+                 <ItemTemplate>
+                     <asp:Label ID="lblIdSignosVitales" runat="server" Text='<%# Bind("IDSignosVitales") %>'></asp:Label>
+                 </ItemTemplate>
+             </asp:TemplateField>
+            <asp:BoundField HeaderText="Fecha Visita" DataField="FechaVisita" DataFormatString="{0:d}" />
+            <asp:BoundField DataField="TipoVisita" HeaderText="Tipo de Visita" />
+            <asp:BoundField HeaderText="Peso" DataField="Peso" />
+            <asp:BoundField HeaderText="Estadío" DataField="Estadio" />
+            <asp:BoundField HeaderText="IMC" DataField="IMC" />
+            <asp:BoundField HeaderText="Próxima visita" DataField="FechaProximaVisita" DataFormatString="{0:d}" />
             <asp:TemplateField>
                <ItemTemplate>
-                  <asp:LinkButton ID="lnkModificar" runat="server"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; Modificar</asp:LinkButton>
+                  <asp:LinkButton ID="lnkModificar" runat="server" OnClick="lnkModificar_Click"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; Modificar</asp:LinkButton>
                </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField>
                <ItemTemplate>
-                  <asp:LinkButton ID="lnkEliminar" runat="server" OnClientClick="return confirmDelete(this);">  <i class="fa fa-trash" aria-hidden="true"></i>  Eliminar</asp:LinkButton>
+                  <asp:LinkButton ID="lnkEliminar" runat="server" OnClientClick="return confirmDelete(this);" OnClick="lnkEliminar_Click">  <i class="fa fa-trash" aria-hidden="true"></i>  Eliminar</asp:LinkButton>
                </ItemTemplate>
             </asp:TemplateField>
          </Columns>
       </asp:GridView>
+
    </div>
+    <script>
+        function confirmDelete(sender) {
+            if ($(sender).attr("confirmed") == "true") { return true; }
+
+            bootbox.confirm("¿Confirma que desea continuar?, no podrá deshacer esta operación", function (confirmed) {
+                if (confirmed) {
+                    $(sender).attr('confirmed', confirmed);
+                    sender.click();
+                }
+            });
+
+            return false;
+        }
+    </script>
 </asp:Content>

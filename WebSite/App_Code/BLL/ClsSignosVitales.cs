@@ -120,6 +120,20 @@ public class ClsSignosVitales
         }
     }
 
+    public DataTable  calcularEdad(int idPaciente, DateTime FechaVisita){
+        try
+        {
+            DataTable dt = new DataTable();
+            dt = db.dataTableSP("SPObtenerEdad", null, db.parametro("@PIdPaciente", idPaciente), db.parametro("@PFechaVisita", FechaVisita));
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            
+            throw ex;
+        }
+}
+
     public ClsSignosVitales()
     {
         //
