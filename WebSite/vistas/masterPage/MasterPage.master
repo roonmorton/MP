@@ -432,8 +432,8 @@ Fin tareas Pendientes-->
                             </li>
 
 
-                            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i>Imágenes</a></li>
-                             <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i>Enfermedades</a></li>
+                            <li><a href="/vistas/imagenes.aspx"><i class="fa fa-circle-o"></i>Imágenes</a></li>
+                             <li><a href="/vistas/enfermedades.aspx"><i class="fa fa-circle-o"></i>Enfermedades</a></li>
                         </ul>
                     </li>
 

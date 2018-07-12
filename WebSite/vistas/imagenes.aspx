@@ -16,7 +16,8 @@
          <div class="form-group">
             <label>
                Tipo de imagen (*)</label>
-            <asp:DropDownList runat="server" ID="cboTipoImagen">
+            <asp:DropDownList runat="server" ID="cboTipoImagen" AutoPostBack="True" 
+               onselectedindexchanged="cboTipoImagen_SelectedIndexChanged">
             </asp:DropDownList>
          </div>
       </div>
@@ -24,8 +25,7 @@
          <div class="form-group">
             <label>
                ¿Cuál?</label>
-            <asp:TextBox runat="server" ID="txtCual">
-            </asp:TextBox>
+            <asp:TextBox runat="server" ID="txtCual" Enabled="False"></asp:TextBox>
          </div>
       </div>
    </div>
@@ -34,9 +34,9 @@
          <div class="form-group">
             <label>
                Resultado (*)</label>
-            <asp:CheckBoxList runat="server" ID="chkListResultado" 
+            <asp:RadioButtonList runat="server" ID="chkListResultado" 
                RepeatDirection="Horizontal">
-            </asp:CheckBoxList>
+            </asp:RadioButtonList>
          </div>
       </div>
    </div>
@@ -52,7 +52,8 @@
    </div>
    <div class="row">
     <div class="col-lg-2">
-      <asp:LinkButton runat="server" id="lnkNuevo" CssClass="btn btn-warning width100">Nueva imagen</asp:LinkButton>
+      <asp:LinkButton runat="server" id="lnkNuevo" CssClass="btn btn-warning width100" 
+          onclick="lnkNuevo_Click">Nueva imagen</asp:LinkButton>
       </div>
       <div class="col-lg-2">
       </div>
@@ -61,16 +62,18 @@
       <div class="col-lg-2">
       </div>
       <div class="col-lg-2">
-       <asp:LinkButton runat="server" ID="lnkGuardar" CssClass="btn btn-primary width100" >Guardar</asp:LinkButton>
+       <asp:LinkButton runat="server" ID="lnkGuardar" 
+            CssClass="btn btn-primary width100" onclick="lnkGuardar_Click" >Guardar</asp:LinkButton>
       </div>
       <div class="col-lg-2">
-         <asp:LinkButton runat="server" ID="lnkCerrar" CssClass="btn btn-danger width100">Cerrar</asp:LinkButton>
+         <asp:LinkButton runat="server" ID="lnkCerrar" 
+            CssClass="btn btn-danger width100" onclick="lnkCerrar_Click">Cerrar</asp:LinkButton>
       </div>
    </div>
    <div class="row">
       <asp:GridView runat="server" ID="grdExistentes" AutoGenerateColumns="False">
          <Columns>
-            <asp:TemplateField>
+            <asp:TemplateField Visible="False">
                <EditItemTemplate>
                   <asp:TextBox ID="TextBox1" runat="server" 
                      Text='<%# Bind("idImagenPaciente") %>'></asp:TextBox>
@@ -81,18 +84,20 @@
             </asp:TemplateField>
             <asp:BoundField DataField="FechaImagen" DataFormatString="{0:d}" 
                HeaderText="Fecha" />
-            <asp:BoundField DataField="Tipo" DataFormatString="TipoImagen" 
+            <asp:BoundField DataField="TipoImagen"  
                HeaderText="Tipo" />
+            <asp:BoundField DataField="CualOtra" HeaderText="Cual otra" />
             <asp:BoundField DataField="ValorImagen" HeaderText="Valor Imagen" />
             <asp:BoundField DataField="Alteracion" HeaderText="Alteración" />
               <asp:TemplateField>
                <ItemTemplate>
-                  <asp:LinkButton ID="lnkModificar" runat="server"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; Modificar</asp:LinkButton>
+                  <asp:LinkButton ID="lnkModificar" runat="server" onclick="lnkModificar_Click"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; Modificar</asp:LinkButton>
                </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField>
                <ItemTemplate>
-                  <asp:LinkButton ID="lnkEliminar" runat="server" OnClientClick="return confirmDelete(this);">  <i class="fa fa-trash" aria-hidden="true"></i>  Eliminar</asp:LinkButton>
+                  <asp:LinkButton ID="lnkEliminar" runat="server" 
+                     OnClientClick="return confirmDelete(this);" onclick="lnkEliminar_Click">  <i class="fa fa-trash" aria-hidden="true"></i>  Eliminar</asp:LinkButton>
                </ItemTemplate>
             </asp:TemplateField>
          </Columns>

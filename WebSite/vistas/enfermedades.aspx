@@ -19,8 +19,10 @@
          <div class="form-group">
             <label>
                Tipo de enfermedad (*)</label>
-            <asp:CheckBoxList ID="chkTipoEnfermedad" runat="server">
-            </asp:CheckBoxList>
+            <asp:RadioButtonList ID="rbTipoEnfermedad" runat="server" AutoPostBack="True" 
+               onselectedindexchanged="chkTipoEnfermedad_SelectedIndexChanged" 
+               RepeatDirection="Horizontal">
+            </asp:RadioButtonList>
          </div>
       </div>
    </div>
@@ -40,7 +42,7 @@
       <div class="col-lg-2 col-md-12 col-sm-2">
          <div class="form-group">
             <label>
-               Tratada</label>
+               Tratada(*)</label>
             <asp:DropDownList ID="cboTratada" runat="server">
             </asp:DropDownList>
          </div>
@@ -48,7 +50,7 @@
       <div class="col-lg-4 col-md-4 col-sm-4">
          <div class="form-group">
             <label>
-               Estado de la enfermedad</label>
+               Estado de la enfermedad(*)</label>
             <asp:DropDownList ID="cboEstadoEnfermedad" runat="server">
             </asp:DropDownList>
          </div>
@@ -58,7 +60,8 @@
    </div>
    <div class="row">
       <div class="col-lg-2">
-         <asp:LinkButton runat="server" ID="lnkNuevo" CssClass="btn btn-warning width100">Nueva Enfermedad &nbsp;<i class="fa fa-plus" aria-hidden="true"></i></asp:LinkButton>
+         <asp:LinkButton runat="server" ID="lnkNuevo" 
+            CssClass="btn btn-warning width100" onclick="lnkNuevo_Click">Nueva Enfermedad &nbsp;<i class="fa fa-plus" aria-hidden="true"></i></asp:LinkButton>
       </div>
       <div class="col-lg-2">
       </div>
@@ -67,10 +70,12 @@
       <div class="col-lg-2">
       </div>
       <div class="col-lg-2">
-         <asp:LinkButton runat="server" ID="lnkGuardar" CssClass="btn btn-primary width100">Guardar&nbsp;<i class="fa fa-floppy-o" aria-hidden="true"></i></asp:LinkButton>
+         <asp:LinkButton runat="server" ID="lnkGuardar" 
+            CssClass="btn btn-primary width100" onclick="lnkGuardar_Click">Guardar&nbsp;<i class="fa fa-floppy-o" aria-hidden="true"></i></asp:LinkButton>
       </div>
       <div class="col-lg-2">
-         <asp:LinkButton runat="server" ID="lnkCerrar" CssClass="btn btn-danger width100">Cerrar &nbsp; <i class="fa fa-times" aria-hidden="true"></i></asp:LinkButton>
+         <asp:LinkButton runat="server" ID="lnkCerrar" 
+            CssClass="btn btn-danger width100" onclick="lnkCerrar_Click">Cerrar &nbsp; <i class="fa fa-times" aria-hidden="true"></i></asp:LinkButton>
       </div>
    </div>
    <div class="row">
@@ -84,18 +89,20 @@
                   <asp:Label ID="lblIdEnfermedadPaciente" runat="server" Text='<%# Bind("IDEnfermedadPaciente") %>'></asp:Label>
                </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField HeaderText="Fecha de enfermedad" />
-            <asp:BoundField HeaderText="Tipo de Enfermedad" />
-            <asp:BoundField HeaderText="Tratada" />
-            <asp:BoundField HeaderText="Estado Enfermedad" />
+            <asp:BoundField HeaderText="Fecha de enfermedad" DataField="fechaEnfermedad" DataFormatString="{0:d}" />
+            <asp:BoundField HeaderText="Enfermedad" DataField="Enfermedad" />
+            <asp:BoundField HeaderText="Tipo de Enfermedad" DataField="TipoEnfermedad" />
+            <asp:BoundField HeaderText="Tratada" DataField="Tratada" />
+            <asp:BoundField HeaderText="Estado Enfermedad" DataField="Estado" />
             <asp:TemplateField>
                <ItemTemplate>
-                  <asp:LinkButton ID="lnkModificar" runat="server"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; Modificar</asp:LinkButton>
+                  <asp:LinkButton ID="lnkModificar" runat="server" onclick="lnkModificar_Click"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; Modificar</asp:LinkButton>
                </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField>
                <ItemTemplate>
-                  <asp:LinkButton ID="lnkEliminar" runat="server" OnClientClick="return confirmDelete(this);">  <i class="fa fa-trash" aria-hidden="true"></i>  Eliminar</asp:LinkButton>
+                  <asp:LinkButton ID="lnkEliminar" runat="server" 
+                     OnClientClick="return confirmDelete(this);" onclick="lnkEliminar_Click">  <i class="fa fa-trash" aria-hidden="true"></i>  Eliminar</asp:LinkButton>
                </ItemTemplate>
             </asp:TemplateField>
          </Columns>
