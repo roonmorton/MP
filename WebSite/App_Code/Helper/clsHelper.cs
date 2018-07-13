@@ -429,20 +429,23 @@ public static class clsHelper
             mensaje = mensaje.Normalize();
             System.Web.UI.MasterPage master;
             master = pagina.Master;
-            System.Web.UI.HtmlControls.HtmlGenericControl divDialog = new System.Web.UI.HtmlControls.HtmlGenericControl();
+        
 
             //Si tiene masterPage busca el div en dicha masterpage
+           
             if (tieneMasterPage)
             {
-                divDialog = (System.Web.UI.HtmlControls.HtmlGenericControl)(pagina.Master.FindControl("divDialog"));
+                pagina.ClientScript.RegisterStartupScript(master.GetType(), "MostrarError", "sweetAlert('Oops...', '¡" + mensaje + "!', 'error');", true);
+               
             }
             else
             {
-                divDialog = (System.Web.UI.HtmlControls.HtmlGenericControl)(pagina.FindControl("divDialog"));
+                pagina.ClientScript.RegisterStartupScript(pagina.GetType(), "MostrarError", "sweetAlert('Oops...', '¡" + mensaje + "!', 'error');", true);
+              
             }
-            divDialog.InnerHtml = mensaje;
-            //pagina.ClientScript.RegisterStartupScript(master.GetType(), "MostrarError", "$('#errorModal').modal();", True)
-            pagina.ClientScript.RegisterStartupScript(master.GetType(), "MostrarError", "sweetAlert('Oops...', '¡" + mensaje + "!', 'error');", true);
+
+                  
+             
         }
         catch (Exception exep)
         {
@@ -636,6 +639,30 @@ public static class clsHelper
         }
     }
 
+    public static void booleanRb(RadioButtonList rb, Boolean? val)
+    {
 
+        try
+        {
+            if (val == null)
+            {
+                rb.SelectedValue = null;
+            }
+            else if (val == true)
+            {
+                rb.SelectedValue = "1";
+            }
+            else if (val == false)
+            {
+                rb.SelectedValue = "0";
+            }
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+
+    }
 
 }//end class

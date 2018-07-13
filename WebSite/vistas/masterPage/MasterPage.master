@@ -453,7 +453,7 @@ Fin tareas Pendientes-->
                                     </span>
                                 </a>
                                 <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i>Niños menores 2 años</a></li>
+                                    <li><a href="/vistas/NutricionMenores.aspx"><i class="fa fa-circle-o"></i>Niños menores 2 años</a></li>
                                     <li>
                                         <a href="#"><i class="fa fa-circle-o"></i>Niños y adolescentes +
                                        </a>

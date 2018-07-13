@@ -8,16 +8,18 @@
     <link rel="Stylesheet" href="css/bootstrap.min.css" />
     <link rel="Stylesheet" href="dist/css/login.css" />
     <link rel="Stylesheet" href="css/alertify.min.css" />
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="Stylesheet" href="dist/css/sweetalert.css" />
+    <script src="js/jquery.js"></script>
     <script src="dist/js/bootstrap.js"></script>
     <script src="js/alertify.min.js"></script>
+    <script src="dist/js/sweetalert.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
    <div class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h1 class="text-center login-title">Sign in to continue to Bootsnipp</h1>
+          
             <div class="account-wall">
                 <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                     alt="">
