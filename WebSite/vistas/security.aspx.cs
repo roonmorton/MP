@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.IO;
 
 public partial class vistas_security : System.Web.UI.Page
 {
@@ -15,7 +16,6 @@ public partial class vistas_security : System.Web.UI.Page
         if (!IsPostBack)
         {
             asignarPermisos();
-            Session["Usuario"] = "Ardani";
             crol.idRol = null;
             ViewState["idRol"] = null;
             ViewState["idUsuario"] = null;
@@ -312,6 +312,8 @@ public partial class vistas_security : System.Web.UI.Page
             chkReiniciarPassword.Enabled = false;
             ViewState["idUsuario"] = null;
             cboRolUsuario.SelectedValue = string.Empty;
+            imgUsuario.ImageUrl = null;
+            imagenLoad = null;
         }
         catch (Exception ex)
         {
@@ -343,6 +345,7 @@ public partial class vistas_security : System.Web.UI.Page
             txtUsuario.Text = dt.usuario;
             cboRolUsuario.SelectedValue = dt.idRol.ToString();
             chkActivo.Checked = dt.activo;
+            imgUsuario.ImageUrl = dt.urlImagen;
 
             chkActivo.Enabled = true;
             chkReiniciarPassword.Enabled = true;
@@ -399,6 +402,15 @@ public partial class vistas_security : System.Web.UI.Page
               us.activo = chkActivo.Checked;
               us.reiniciarContrasena = chkReiniciarPassword.Checked;
               us.usuarioOpera = Session["Usuario"].ToString();
+              if (!string.IsNullOrEmpty(imagenLoad.FileName)) {
+                  FileInfo fi = new FileInfo(imagenLoad.FileName);
+                 
+                  if (File.Exists(MapPath("../imagenesusuarios")+ @"\"+ us.usuario+fi.Extension)) {
+                      File.Delete(MapPath("../imagenesusuarios") + @"\" + us.usuario + fi.Extension);
+                  }
+                  imagenLoad.SaveAs(MapPath("../imagenesusuarios") + @"\" + us.usuario + fi.Extension);
+                  us.urlImagen = us.usuario + fi.Extension;
+              }
               us.grabar();
               clsHelper.mensaje("Proceso exitoso", this, clsHelper.tipoMensaje.informacion, true);
               limpiarUsuario();

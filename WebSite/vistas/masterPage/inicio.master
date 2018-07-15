@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="vistas_masterPage_MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="inicio.master.cs" Inherits="vistas_masterPage_inicio" %>
 
 <!DOCTYPE html>
 <html>
@@ -36,6 +36,7 @@ folder instead of downloading all of them to reduce the load. -->
    <link rel="Stylesheet" href="../../dist/css/site.css" />
    <link rel="stylesheet" href="../../dist/css/animate.min.css">
    <link rel="stylesheet" href="../../dist/css/sweetalert.css">
+    <link rel="stylesheet" href="../../css/fileinput.min.css">
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
    <!--[if lt IE 9]>
@@ -101,11 +102,6 @@ folder instead of downloading all of them to reduce the load. -->
 
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <span class="label label-success" runat="server" id="lblNombrePaciente"> </span>
-                            <span class="label label-success" runat="server" id="lblExpedienteHR"> </span>
-                            <span class="label label-success" runat="server" id="lblExpedientePD"> </span>
-                        </li>
                         <!-- Messages: style can be found in dropdown.less
 
 <li class="dropdown messages-menu">
@@ -311,13 +307,14 @@ Fin tareas Pendientes-->
                         <!-- cuenta -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                 <asp:Image runat="server"    class="img-responsive user-image" id="avatarImage" alt="imagen de usuario" />
+                                <asp:Image runat="server"    class="img-responsive user-image" id="avatarImage" alt="imagen de usuario" />
                                 <span class="hidden-xs" runat="server" id="nombreCorto"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                 <asp:Image runat="server" id="avatarImg"  class="img-responsive img-circle" alt="imagen de usuario" style="width:128px;height:128px; margin:auto; position:relative;float:none; text-align:center;" />
+                                 
+                                    <asp:Image runat="server" id="avatarImg"  class="img-responsive img-circle" alt="imagen de usuario" style="width:128px;height:128px; margin:auto; position:relative;float:none; text-align:center;" />
                                 
                                     <p id="usuario" runat="server">
                                         
@@ -327,7 +324,7 @@ Fin tareas Pendientes-->
                                 </li>
                                 <!-- Menu Body -->
                                 <li class="user-body">
-                                 <div class="row">
+                                    <div class="row">
                                      
                                         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
                                             <span id="rol" runat="server"></span>
@@ -338,18 +335,18 @@ Fin tareas Pendientes-->
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
-                                    <div class="pull-left">
+                                    <!--div class="pull-left">
                                         <a href="#" class="btn btn-default btn-flat">Perfil</a>
-                                    </div>
+                                    </!--div>
                                     <div class="pull-right">
                                         <a href="#" class="btn btn-default btn-flat">Salir</a>
-                                    </div>
+                                    </div-->
                                 </li>
                             </ul>
                         </li>
                         <!-- Control Sidebar Toggle Button -->
                         <li>
-                            <!--a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a-->
+                            <!--a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></!--a-->
                         </li>
                     </ul>
                 </div>
@@ -373,23 +370,13 @@ Fin tareas Pendientes-->
                 </div>
              
                 <!-- search form -->
-                <div class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="txtMenuBuscar" id="txtMenuBuscar" class="form-control" placeholder="Buscar...">
-                        <span class="input-group-btn">
-                            <a  name="btnMenuBuscar" id="btnMenuBuscar" class="btn btn-flat">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </span>
-                    </div>
-                </div>
+           
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <div id="menuDiv"> 
                 <ul class="sidebar-menu">
                     <li class="header">Menú Principal</li>
-                          
-                    <li>
+                           <li>
                         <a href="/vistas/inicio.aspx">
                            <span>Inicio
                                <i class="fa fa-home" aria-hidden="true"></i>
@@ -403,167 +390,17 @@ Fin tareas Pendientes-->
 
                     <li class="treeview">
                         <a href="#">
-                          <span>Paciente</span>
+                          <span>Seguridad</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="active"><a href="/vistas/pacBasales.aspx"><i class="fa fa-circle-o"></i>Datos basales</a></li>
-                            <li><a href="/vistas/datosMadre.aspx"><i class="fa fa-circle-o"></i>Datos VIH de la madre</a></li>
+                            <li class="active"><a href="/vistas/security.aspx"><i class="fa fa-circle-o"></i>Seguridad de pantallas</a></li>
+                            
                         </ul>
                     </li>
-                    <li class="treeview">
-                        <a href="#">
-                           
-                            <span>Visita</span>
-                             <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="/vistas/signosVitales.aspx"><i class="fa fa-circle-o"></i>Signos Vitales</a></li>
-                            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i>Síntomas</a></li>
-
-                                 <li>
-                                <a href="#"><i class="fa fa-circle-o"></i>Exploración física
-                                       
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-left pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i>Exploración física</a></li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Examen neurológico
-                                       </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li><a href="/vistas/imagenes.aspx"><i class="fa fa-circle-o"></i>Imágenes</a></li>
-                             <li><a href="/vistas/enfermedades.aspx"><i class="fa fa-circle-o"></i>Enfermedades</a></li>
-                        </ul>
-                    </li>
-
-                     <li class="treeview">
-                        <a href="#">
-                                <span>Interconsulta</span>
-                             <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                                     <li>
-                                <a href="#"><i class="fa fa-circle-o"></i>Nutrición
-                                       
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-left pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="/vistas/NutricionMenores.aspx"><i class="fa fa-circle-o"></i>Niños menores 2 años</a></li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Niños y adolescentes +
-                                       </a>
-                                    </li>
-                                </ul>
-                            </li> 
-                                             <li>
-                                <a href="#"><i class="fa fa-circle-o"></i>Psicología
-                                       
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-left pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i>Niños menores 2 años</a></li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Niños y adolescentes +
-                                       </a>
-                                    </li>
-                                      <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Acompañante
-                                       </a>
-                                    </li>
-                                </ul>
-                            </li> 
-
-                                <li>
-                                <a href="#"><i class="fa fa-circle-o"></i>Trabajo social
-                                       
-                                    <span class="pull-right-container">
-                                        <i class="fa fa-angle-left pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i>Datos del encargado</a></li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Grupo familiar
-                                       </a>
-                                    </li>
-                                      <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Determinantes
-                                       </a>
-                                    </li>
-                                </ul>
-                            </li> 
-
-                          
-                        </ul>
-                    </li>
-
-                      <li class="treeview">
-                        <a href="#">
-                          <span>Laboratorios</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="/vistas/pacBasales.aspx"><i class="fa fa-circle-o"></i>Biología molecular</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Bioquímica</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Coprología</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>CD4, CD8 y CV</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Diagnóstico VIH</a></li> 
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Hematología</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Líquidos corporales</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Microbiología</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Resistencias</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Serología</a></li>
-
-                        </ul>
-                    </li>
-
-                             <li class="treeview">
-                        <a href="#">
-                          <span>Tratamientos</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="/vistas/pacBasales.aspx"><i class="fa fa-circle-o"></i>Tratamiento ARV</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Profilaxis</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Tratamiento IOs, ITS</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Consulta a farmacia</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Vacunas</a></li> 
-                           
-
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        <a href="pages/widgets.html">
-                           <span>Observaciones</span>
-                            <span class="pull-right-container">
-                               
-                            </span>
-                        </a>
-                    </li>
-                   
-                </ul>
+                   </ul>
                 </div>
 
                 <div id="favoritosDiv">                
@@ -594,7 +431,7 @@ Fin tareas Pendientes-->
       <!-- /.content-wrapper -->
       <footer class="main-footer">
             <div class="pull-right hidden-xs">
-                <b>Version</b>
+                <b>Version 1.0</b>
             </div>
             <strong>Soporte: ardaniramirez@gmail.com</strong> Tel. 54588066
                 
@@ -817,5 +654,7 @@ immediately after the control sidebar -->
       </div>
    </div>
    <!--Notificaciones-->
+
+     
 </body>
 </html>

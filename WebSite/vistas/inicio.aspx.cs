@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 public partial class vistas_inicio : System.Web.UI.Page
@@ -14,7 +15,13 @@ public partial class vistas_inicio : System.Web.UI.Page
             if (!IsPostBack)
             {
                 asignarPermisos();
-            }
+
+                Session["idPaciente"] = null;
+                Session["nombrePaciente"] = null;
+                Session["expedienteHR"] = null;
+                Session["ExpedientePD"] = null;
+              
+                           }
         }
         catch (Exception ex)
         {
@@ -28,13 +35,24 @@ public partial class vistas_inicio : System.Web.UI.Page
         {
            
             string idPaciente;
+            string nombre;
+            string expedienteHR;
+            string expedientePD;
+
             GridViewRow fila = (GridViewRow)((Control)sender).Parent.Parent;
             idPaciente = ((Label)fila.FindControl("lblIdPaciente")).Text;
+            nombre = fila.Cells[3].Text+ " " + fila.Cells[4].Text+ " " + fila.Cells[5].Text+ " " + fila.Cells[6].Text;
+            expedienteHR = fila.Cells[1].Text;
+            expedientePD = fila.Cells[2].Text;
             if (!string.IsNullOrEmpty(idPaciente))
             {
                 Session["idPaciente"] = idPaciente;
+                Session["nombrePaciente"] = nombre;
+                Session["expedienteHR"] = expedienteHR;
+                Session["ExpedientePD"] = expedientePD;
                 Response.Redirect("signosVitales.aspx");
             }
+            
         }
         catch (Exception ex)
         {
@@ -93,18 +111,28 @@ public partial class vistas_inicio : System.Web.UI.Page
         try
         {
             string idPaciente;
+            string nombre;
+            string expedienteHR;
+            string expedientePD;
             GridViewRow fila = (GridViewRow)((Control)sender).Parent.Parent;
             idPaciente = ((Label)fila.FindControl("lblIdPaciente")).Text;
+            nombre = fila.Cells[3].Text + " " + fila.Cells[4].Text + " " + fila.Cells[5].Text + " " + fila.Cells[6].Text;
+            expedienteHR = fila.Cells[1].Text;
+            expedientePD = fila.Cells[2].Text;
+
             if (!string.IsNullOrEmpty(idPaciente))
             {
                 Session["idPaciente"] = idPaciente;
+                Session["nombrePaciente"] = nombre;
+                Session["expedienteHR"] = expedienteHR;
+                Session["ExpedientePD"] = expedientePD;
                 Response.Redirect("pacBasales.aspx");
             }
         }
         catch (Exception ex)
         {
-            
-             clsHelper.mostrarError("lnkVerPaciente_Click", ex, this, true);
+
+            clsHelper.mostrarError("lnkVerPaciente_Click", ex, this, true);
         }
     }
     protected void lnkNuevoPaciente_Click(object sender, EventArgs e)
@@ -125,4 +153,6 @@ public partial class vistas_inicio : System.Web.UI.Page
              clsHelper.mostrarError("lnkNuevoPaciente_Click", ex, this, true);
         }
     }
+
+  
 }

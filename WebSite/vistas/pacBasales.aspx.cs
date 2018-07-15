@@ -9,6 +9,23 @@ using System.Data ;
 public partial class vistas_pacBasales : System.Web.UI.Page
 {
 
+    protected void page_preinit(object sender, EventArgs e) {
+        try
+        {
+            if (Session["idPaciente"] != null)
+            {
+                this.MasterPageFile = "~/vistas/masterPage/MasterPage.master";
+            }
+            else {
+                this.MasterPageFile = "~/vistas/masterPage/inicio.master";
+            }
+        }
+        catch (Exception )
+        {
+            
+            
+        }
+    }
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -21,8 +38,10 @@ public partial class vistas_pacBasales : System.Web.UI.Page
                 cargarcombos();
                 if (Session["idPaciente"] != null)
                 {
+                   
                     cargarDatosPaciente(Session["idPaciente"].ToString());
                 }
+                
             }
 
             if (!string.IsNullOrEmpty(Request.Params["__EVENTTARGET"]))

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vistas/masterPage/MasterPage.master" AutoEventWireup="true" CodeFile="pacBasales.aspx.cs" Inherits="vistas_pacBasales" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vistas/masterPage/inicio.master" AutoEventWireup="true" CodeFile="pacBasales.aspx.cs" Inherits="vistas_pacBasales" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

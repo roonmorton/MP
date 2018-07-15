@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vistas/masterPage/MasterPage.master" AutoEventWireup="true" CodeFile="security.aspx.cs" Inherits="vistas_security" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vistas/masterPage/inicio.master" AutoEventWireup="true" CodeFile="security.aspx.cs" Inherits="vistas_security" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -55,13 +55,28 @@
                         <asp:CheckBox runat="server" ID="chkActivo"></asp:CheckBox>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="form-group">
                         <label>Cambiar contraseña</label>
                         <asp:CheckBox runat="server" ID="chkReiniciarPassword"></asp:CheckBox>
                     </div>
                 </div>
+              </div>
 
+            <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label>Fotografía</label>
+                        <asp:FileUpload CssClass="file" runat="server" ID="imagenLoad"></asp:FileUpload>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+
+                    <asp:Image  runat="server" ID="imgUsuario" CssClass="img-responsive img-circle" alt="imagen de usuario" style="width:128px;height:128px; margin:auto; position:relative;float:none; text-align:center;"/>
+                </div>
+            </div>
+
+            <div class="row">
 
                 <div class="col-lg-1 col-md-1 col-sm-12">
                     <asp:LinkButton runat="server" ID="btnGrabarUsuarios" CssClass="btn btn-primary" OnClick="btnGrabarUsuarios_Click">Grabar&nbsp;<i class="fa fa-floppy-o" aria-hidden="true"></i></asp:LinkButton>
@@ -225,6 +240,11 @@
 
             return false;
         }
+    </script>
+    <script src="../js/fileinput.min.js"></script>
+    <script>        $(".file").fileinput({
+            showUpload: false, fileType: "pdf", language: 'es', allowedFileExtensions: ['jpg', 'png'], showPreview: true
+        });
     </script>
 </asp:Content>
 

@@ -2,8 +2,8 @@
    AutoEventWireup="true" CodeFile="enfermedades.aspx.cs" Inherits="vistas_enfermedades" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<link href="../css/select2.min.css" rel="stylesheet" />
+<script src="../js/select2.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
    <div class="row">

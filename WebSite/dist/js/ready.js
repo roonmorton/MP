@@ -1,11 +1,11 @@
 $(document).ready(function () {
    /**Funciones de inicio**/
-   datosPersonalesFn();
-   menuFn();
-   cumpleanerosFn();
-   diasVacacionesFn();
-   favoritosFn();
-   cumpleanerosFn();
+  // datosPersonalesFn();
+   //menuFn();
+   //cumpleanerosFn();
+   //diasVacacionesFn();
+   //favoritosFn();
+   //cumpleanerosFn();
    //saldoCafeteriaFn();
 
    /***Controles de usuario especiales**/

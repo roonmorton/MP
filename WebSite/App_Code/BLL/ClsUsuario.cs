@@ -17,6 +17,7 @@ public class ClsUsuario
     public Boolean activo { get; set; }
     public Boolean reiniciarContrasena { get; set; }
     public string usuarioOpera { get; set; }
+    public string urlImagen { get; set; }
 
 	public ClsUsuario()
 	{
@@ -36,6 +37,7 @@ public class ClsUsuario
                 , db.parametro("@PActivo", this.activo)
                 , db.parametro("@PusuarioOpera", this.usuarioOpera)
                 , db.parametro("@PReiniciarContrasena", this.reiniciarContrasena)
+                , db.parametro("@PurlImagen", this.urlImagen)
                 );
         }
         catch (Exception ex)
@@ -61,6 +63,7 @@ public class ClsUsuario
                 r.idRol = (int)dt.Rows[0]["idRol"];
                 r.nombreUsuario = dt.Rows[0]["nombreUsuario"].ToString();
                 r.activo = (Boolean)dt.Rows[0]["activo"];
+                r.urlImagen = dt.Rows[0]["urlImagen"].ToString();
             }
             return r;
         }
@@ -78,6 +81,21 @@ public class ClsUsuario
             DataTable r = new DataTable();
             r = db.dataTableSP("SPUsuarioSelect");
             return r;
+        }
+        catch (Exception ex)
+        {
+            
+            throw ex;
+        }
+    }
+
+    public DataTable datosInicio(string idUsuario) { 
+     try
+        {
+            DataTable dt = new DataTable();
+            ClsDb db = new ClsDb();
+            dt = db.dataTableSP("[SPDatosUsuario]", null, db.parametro("@PidUsuario", idUsuario));
+            return dt ;
         }
         catch (Exception ex)
         {
