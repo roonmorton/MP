@@ -465,7 +465,7 @@ Fin tareas Pendientes-->
                                 <ul class="treeview-menu">
                                     <li><a href="/vistas/NutricionMenores.aspx"><i class="fa fa-circle-o"></i>Niños menores 2 años</a></li>
                                     <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Niños y adolescentes +
+                                        <a href="NutricionAdolescentes.aspx"><i class="fa fa-circle-o"></i>Niños y adolescentes
                                        </a>
                                     </li>
                                 </ul>
@@ -478,13 +478,13 @@ Fin tareas Pendientes-->
                                     </span>
                                 </a>
                                 <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i>Niños menores 2 años</a></li>
+                                    <li><a href="/vistas/psicologiaMenores.aspx"><i class="fa fa-circle-o"></i>Niños menores 2 años</a></li>
                                     <li>
                                         <a href="#"><i class="fa fa-circle-o"></i>Niños y adolescentes +
                                        </a>
                                     </li>
                                       <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Acompañante
+                                        <a href="/vistas/psicologiaAcompanante.aspx"><i class="fa fa-circle-o"></i>Acompañante
                                        </a>
                                     </li>
                                 </ul>

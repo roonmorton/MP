@@ -24,21 +24,14 @@
                <div class="form-group">
                   <label>
                      Peso (Lbs)</label>
-                  <asp:TextBox runat="server" ID="txtPesoLibras" CssClass="numero"></asp:TextBox>
+                  <asp:TextBox runat="server" ID="txtPesoLibras" CssClass="numero"   onblur="javascript:if(this.value!='') __doPostBack('imc','')"></asp:TextBox>
                </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-               <div class="form-group">
-                  <label>
-                     Peso (Oz)</label>
-                  <asp:TextBox runat="server" ID="txtPesoOnzas" CssClass="numero"></asp:TextBox>
-               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
+                       <div class="col-lg-3 col-md-3 col-sm-12">
                <div class="form-group">
                   <label>
                      Talla</label>
-                  <asp:TextBox runat="server" ID="txtTalla" CssClass="numero"></asp:TextBox>
+                  <asp:TextBox runat="server" ID="txtTalla" CssClass="numero"   onblur="javascript:if(this.value!='') __doPostBack('imc','')"></asp:TextBox>
                </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
@@ -399,7 +392,7 @@
                      Suplemento nutricional</label>
                   <asp:RadioButtonList runat="server" ID="rbSuplementoNutricional" RepeatDirection="Horizontal">
                      <asp:ListItem Value="1">Sí</asp:ListItem>
-                     <asp:ListItem Selected="True" Value="0">No</asp:ListItem>
+                     <asp:ListItem Value="0">No</asp:ListItem>
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -407,7 +400,7 @@
                <div class="form-group">
                   <label>
                      Multivitamínico</label>
-                  <asp:RadioButtonList runat="server" ID="RadioButtonList1" RepeatDirection="Horizontal">
+                  <asp:RadioButtonList runat="server" ID="rbMultivitaminico" RepeatDirection="Horizontal">
                      <asp:ListItem Value="1">Sí</asp:ListItem>
                      <asp:ListItem  Value="0">No</asp:ListItem>
                   </asp:RadioButtonList>
@@ -469,8 +462,9 @@
             </asp:TemplateField>
             <asp:TemplateField>
                <ItemTemplate>
-                  <asp:LinkButton ID="lnkEliminar" runat="server" OnClientClick="return confirmDelete(this);"
-                    >  <i class="fa fa-trash" aria-hidden="true"></i>  Eliminar</asp:LinkButton>
+                  <asp:LinkButton ID="lnkEliminar" runat="server" 
+                     OnClientClick="return confirmDelete(this);" onclick="lnkEliminar_Click"
+                    >&nbsp;  <i class="fa fa-trash" aria-hidden="true"></i>  &nbsp; Eliminar</asp:LinkButton>
                </ItemTemplate>
             </asp:TemplateField>
          </Columns>
