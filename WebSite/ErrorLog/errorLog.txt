@@ -1124,3 +1124,47 @@ Se terminó la instrucción.-grabar
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    en System.Web.HttpResponse.Redirect(String url)
    en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+25/07/2018 22:01:56,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+25/07/2018 22:02:43,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+25/07/2018 22:05:49,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_biologiaMolecular.lnkCerrar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\biologiaMolecular.aspx.cs:línea 122,lnkCerrar_Click,Error:Subproceso anulado.-AbortInternal
+25/07/2018 22:05:53,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+25/07/2018 22:15:00,forastero,   en vistas_signosVitales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 228
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+25/07/2018 22:15:06,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+25/07/2018 22:15:13,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 53,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal

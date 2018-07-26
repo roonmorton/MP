@@ -318,6 +318,9 @@ public partial class vistas_signosVitales : System.Web.UI.Page
                 case "txtFechaVisita":
                     calcularEdad();
                     break;
+                case "imc":
+                    calcularIMC();
+                    break;
             }
         }
         catch (Exception ex)
@@ -340,7 +343,8 @@ public partial class vistas_signosVitales : System.Web.UI.Page
                         txtEdadAnos.Text = d.Rows[0]["anios"].ToString();
                         txtEdadMeses.Text = d.Rows[0]["meses"].ToString();
                         txtEdadDias.Text = d.Rows[0]["dias"].ToString();
-                    }
+                    
+}
                 }
             }
         }
@@ -350,4 +354,16 @@ public partial class vistas_signosVitales : System.Web.UI.Page
             throw ex;
         }
     }
+
+    void calcularIMC()
+    {
+        double? imc;
+        if (!string.IsNullOrEmpty(txtPeso.Text) && !string.IsNullOrEmpty(txtTalla.Text))
+        {
+            imc = (clsHelper.valD(txtPeso.Text) / 2.2) / Math.Pow(double.Parse(txtTalla.Text), 2);
+            txtImc .Text = String.Format("{0:0.00}", imc);
+        }
+    }
+
+   
 }

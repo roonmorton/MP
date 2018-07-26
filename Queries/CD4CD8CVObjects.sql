@@ -1,0 +1,156 @@
+CREATE TABLE CD4CD8CV(
+idCD4CD8CV INT PRIMARY KEY IDENTITY(1,1)
+,idPaciente INT
+,fechaAnalitica DATE
+,CD4 FLOAT
+,CD8 FLOAT
+,CD4P FLOAT
+,CD8P FLOAT
+,CD3 FLOAT
+,CD4CD8 FLOAT
+,CVRNA FLOAT
+,CVLog10 FLOAT
+,CV FLOAT
+)
+
+GO
+ALTER TABLE CD4CD8CV
+ADD usuarioCreacion VARCHAR(100)
+, fechaCreacion DATETIME DEFAULT(GETDATE())
+,usuarioModificacion VARCHAR(100)
+,fechaModificacion DATETIME
+
+go
+
+CREATE TRIGGER trgCD4CD8CV
+   ON  CD4CD8CV
+   AFTER UPDATE
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    UPDATE a
+	SET a.FechaModificacion = GETDATE()   
+	FROM CD4CD8CV a INNER JOIN Inserted b ON a.idCD4CD8CV = b.idCD4CD8CV
+	 
+
+END
+GO
+
+CREATE PROCEDURE SPCD4CD8CVIU 
+@PidCD4CD8CV INT
+,@PidPaciente INT
+,@PfechaAnalitica DATE
+,@PCD4 FLOAT
+,@PCD8 FLOAT
+,@PCD4P FLOAT
+,@PCD8P FLOAT
+,@PCD3 FLOAT
+,@PCD4CD8 FLOAT
+,@PCVRNA FLOAT
+,@PCVLog10 FLOAT
+,@PCV FLOAT
+,@Pusuario VARCHAR(100)
+AS
+BEGIN
+	IF NOT EXISTS(SELECT  1 FROM CD4CD8CV WHERE idCD4CD8CV = @PidCD4CD8CV)
+	BEGIN
+		INSERT CD4CD8CV(
+		idPaciente
+		,fechaAnalitica
+		,CD4
+		,CD8
+		,CD4P
+		,CD8P
+		,CD3
+		,CD4CD8
+		,CVRNA
+		,CVLog10
+		,CV
+		,usuarioCreacion
+		) VALUES(
+		@PidPaciente
+		,@PfechaAnalitica
+		,@PCD4
+		,@PCD8
+		,@PCD4P
+		,@PCD8P
+		,@PCD3
+		,@PCD4CD8
+		,@PCVRNA
+		,@PCVLog10
+		,@PCV
+		,@Pusuario
+		)
+	END
+	ELSE
+	BEGIN
+		UPDATE CD4CD8CV
+		SET 
+		idPaciente=@PidPaciente
+		,fechaAnalitica = @PfechaAnalitica
+		,CD4=@PCD4
+		,CD8=@PCD8
+		,CD4P=@PCD4P
+		,CD8P=@PCD8P
+		,CD3=@PCD3
+		,CD4CD8=@PCD4CD8
+		,CVRNA=@PCVRNA
+		,CVLog10=@PCVLog10
+		,CV=@PCV
+		,usuarioModificacion = @Pusuario
+		WHERE idCD4CD8CV = @PidCD4CD8CV
+	END
+END
+GO
+CREATE PROCEDURE UPCD4CD8CVD
+@PidCD4CD8CV INT
+AS
+BEGIN
+	DELETE CD4CD8CV WHERE idCD4CD8CV=@PidCD4CD8CV
+END
+
+GO
+CREATE PROCEDURE UPSCD4CD8CVPorID
+@PidCD4CD8CV INT
+AS
+BEGIN
+	SELECT  
+	idCD4CD8CV
+	,idPaciente
+	,fechaAnalitica
+	,CD4
+	,CD8
+	,CD4P
+	,CD8P
+	,CD3
+	,CD4CD8
+	,CVRNA
+	,CVLog10
+	,CV
+FROM CD4CD8CV
+	WHERE idCD4CD8CV=@PidCD4CD8CV
+END
+GO
+CREATE PROCEDURE UPSCD4CD8CVTodos
+@PidPaciente INT
+AS
+BEGIN
+	SELECT  
+	idCD4CD8CV
+	,idPaciente
+	,fechaAnalitica
+	,CD4
+	,CD8
+	,CD4P
+	,CD8P
+	,CD3
+	,CD4CD8
+	,CVRNA
+	,CVLog10
+	,CV
+FROM CD4CD8CV
+	WHERE idPaciente=@PidPaciente
+END

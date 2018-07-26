@@ -77,14 +77,14 @@
          <div class="form-group">
             <label>
                Talla (cms)</label>
-            <asp:TextBox ID="txtTalla" CssClass="numero" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtTalla" CssClass="numero" runat="server" onblur="javascript:if(this.value!='') __doPostBack('imc','')"></asp:TextBox>
          </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
          <div class="form-group">
             <label>
                Peso</label>
-            <asp:TextBox ID="txtPeso" CssClass="numero" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtPeso" CssClass="numero" runat="server" onblur="javascript:if(this.value!='') __doPostBack('imc','')"></asp:TextBox>
          </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">

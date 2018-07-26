@@ -504,7 +504,7 @@ Fin tareas Pendientes-->
                                        </a>
                                     </li>
                                       <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i>Determinantes
+                                        <a href="/vistas/trabajoSocialAdherencia.aspx"><i class="fa fa-circle-o"></i>Determinantes
                                        </a>
                                     </li>
                                 </ul>
@@ -522,10 +522,10 @@ Fin tareas Pendientes-->
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="/vistas/pacBasales.aspx"><i class="fa fa-circle-o"></i>Biología molecular</a></li>
+                            <li><a href="/vistas/biologiaMolecular.aspx"><i class="fa fa-circle-o"></i>Biología molecular</a></li>
                             <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Bioquímica</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Coprología</a></li>
-                            <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>CD4, CD8 y CV</a></li>
+                            <li><a href="/vistas/coprologia.aspx"><i class="fa fa-circle-o"></i>Coprología</a></li>
+                            <li><a href="/vistas/cd4cd8cv.aspx"><i class="fa fa-circle-o"></i>CD4, CD8 y CV</a></li>
                             <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Diagnóstico VIH</a></li> 
                             <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Hematología</a></li>
                             <li><a href="/vistas/madre.aspx"><i class="fa fa-circle-o"></i>Líquidos corporales</a></li>

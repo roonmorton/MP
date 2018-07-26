@@ -477,6 +477,23 @@ public static class clsHelper
     }
 
 
+    public static double val(string textNumber) {
+       try
+       {
+          double r = 0;
+          if (IsNumeric(textNumber))
+          {
+             r = double.Parse(textNumber);
+          }
+          return r;
+       }
+       catch (Exception ex)
+       {
+          
+          throw ex;
+       }
+    }
+
     public static Nullable<double> valD(string textNumber)
     {
         Double? r = null;
