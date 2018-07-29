@@ -360,7 +360,7 @@ public partial class vistas_signosVitales : System.Web.UI.Page
         double? imc;
         if (!string.IsNullOrEmpty(txtPeso.Text) && !string.IsNullOrEmpty(txtTalla.Text))
         {
-            imc = (clsHelper.valD(txtPeso.Text) / 2.2) / Math.Pow(double.Parse(txtTalla.Text), 2);
+            imc = (clsHelper.valD(txtPeso.Text) / 2.2) / Math.Pow((double.Parse(txtTalla.Text)/100), 2);
             txtImc .Text = String.Format("{0:0.00}", imc);
         }
     }
