@@ -100,9 +100,9 @@ public partial class vistas_biologiaMolecular : System.Web.UI.Page
 
           bm.fechaMuestra = clsHelper.valDate(txtFechaMuestra.Text);
           bm.fechaAnalisis = clsHelper.valDate(txtFechaAnalisis.Text);
-          bm.muestra = clsHelper.valD(txtMuestra.Text);
-          bm.PCRMycobacteriumTuberculosis = clsHelper.valD(txtPCRMycobacterium.Text);
-          bm.PCRHistoplasmaCapsulatum = clsHelper.valD(txtPCRHistoplasma.Text);
+          bm.muestra = txtMuestra.Text;
+          bm.PCRMycobacteriumTuberculosis = txtPCRMycobacterium.Text;
+          bm.PCRHistoplasmaCapsulatum = txtPCRHistoplasma.Text;
           bm.usuario = Session["usuario"].ToString();
           bm.grabar();
           limpiar();

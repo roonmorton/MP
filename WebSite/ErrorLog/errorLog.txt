@@ -1168,3 +1168,145 @@ Se terminó la instrucción.-grabar
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    en System.Web.HttpResponse.Redirect(String url)
    en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 53,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal
+2/08/2018 22:08:20,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+2/08/2018 22:09:30,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+2/08/2018 22:13:42,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_LiquidosCorporales.lnkCerrar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 133,lnkCerrar_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 08:26:03,forastero,   en vistas_diagnosticoVIH.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\diagnosticoVIH.aspx.cs:línea 232
+   en vistas_diagnosticoVIH.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\diagnosticoVIH.aspx.cs:línea 18,Page_Load,Error:Subproceso anulado.-asignarPermisos
+7/08/2018 08:31:28,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 08:31:38,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 08:34:22,aramirez,   en ClsBiologiaMolecular.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsBiologiaMolecular.cs:línea 35
+   en vistas_biologiaMolecular.lnkGuardar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\biologiaMolecular.aspx.cs:línea 107,lnkGuardar_Click,Error:Error al convertir el tipo de datos nvarchar a decimal.-grabar
+7/08/2018 08:34:51,aramirez,   en ClsBiologiaMolecular.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsBiologiaMolecular.cs:línea 35
+   en vistas_biologiaMolecular.lnkGuardar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\biologiaMolecular.aspx.cs:línea 107,lnkGuardar_Click,Error:Error al convertir el tipo de datos nvarchar a decimal.-grabar
+7/08/2018 08:39:08,aramirez,   en ClsBiologiaMolecular.grabar() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\App_Code\BLL\ClsBiologiaMolecular.cs:línea 35
+   en vistas_biologiaMolecular.lnkGuardar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\biologiaMolecular.aspx.cs:línea 107,lnkGuardar_Click,Error:Error al convertir el tipo de datos nvarchar a decimal.-grabar
+7/08/2018 08:53:45,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_trabajoSocialAdherencia.lnkCerrar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\trabajoSocialAdherencia.aspx.cs:línea 105,lnkCerrar_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 08:53:49,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 09:55:39,forastero,   en vistas_inicio.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 105
+   en vistas_inicio.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 17,Page_Load,Error:Subproceso anulado.-asignarPermisos
+7/08/2018 09:55:45,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 09:56:36,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 10:18:47,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 10:19:44,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 10:31:48,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 10:31:52,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 15:34:30,forastero,   en vistas_tratamientoARV.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 104
+   en vistas_tratamientoARV.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 17,Page_Load,Error:Subproceso anulado.-asignarPermisos
+7/08/2018 15:35:41,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 15:35:47,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 15:36:05,aramirez,   en vistas_tratamientoARV.cargarCbo() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 77
+   en vistas_tratamientoARV.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 18,Page_Load,Error:El nombre de columna 'id' no es válido.
+El nombre de columna 'nombre' no es válido.-cargarCbo
+7/08/2018 15:36:32,aramirez,   en vistas_tratamientoARV.cargarCbo() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 77
+   en vistas_tratamientoARV.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 18,Page_Load,Error:El nombre de columna 'id' no es válido.
+El nombre de columna 'nombre' no es válido.-cargarCbo
+7/08/2018 15:38:48,aramirez,   en vistas_tratamientoARV.cargarCbo() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 77
+   en vistas_tratamientoARV.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 18,Page_Load,Error:El nombre de columna 'id' no es válido.
+El nombre de columna 'nombre' no es válido.-cargarCbo
+7/08/2018 15:39:18,forastero,   en vistas_tratamientoARV.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 104
+   en vistas_tratamientoARV.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\TratamientoARV.aspx.cs:línea 17,Page_Load,Error:Subproceso anulado.-asignarPermisos
+7/08/2018 15:39:28,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+7/08/2018 15:39:33,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal

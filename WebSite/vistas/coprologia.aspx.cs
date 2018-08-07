@@ -90,12 +90,12 @@ public partial class vistas_coprologia : System.Web.UI.Page
          }
 
          c.fechaAnalitica = clsHelper.valDate(txtFechaAnalitica.Text);
-         c.sangreOculta = clsHelper.valD(txtSangreOculta.Text);
-         c.azulMetilenoHeces = clsHelper.valD(txtAzulMetilenoHeces.Text);
-         c.polimorfonucleares = clsHelper.valD(txtPolimorfonucleares.Text);
-         c.mononucleares = clsHelper.valD(txtMononucleares.Text);
-         c.paracitosHeces = clsHelper.valD(txtParásitosheces.Text);
-         c.azucaresReductores = clsHelper.valD(txtAzucaresReductores.Text);
+         c.sangreOculta = (txtSangreOculta.Text);
+         c.azulMetilenoHeces = (txtAzulMetilenoHeces.Text);
+         c.polimorfonucleares = (txtPolimorfonucleares.Text);
+         c.mononucleares = (txtMononucleares.Text);
+         c.paracitosHeces =(txtParásitosheces.Text);
+         c.azucaresReductores =(txtAzucaresReductores.Text);
          c.usuario = Session["usuario"].ToString();
          c.grabar();
          limpiar();

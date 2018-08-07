@@ -9,12 +9,12 @@ public class Clscoprologia
    public int? idCoprologia { get; set; }
    public int? idPaciente { get; set; }
    public DateTime? fechaAnalitica { get; set; }
-   public Double? sangreOculta { get; set; }
-   public Double? azulMetilenoHeces { get; set; }
-   public Double? polimorfonucleares { get; set; }
-   public Double? mononucleares { get; set; }
-   public Double? paracitosHeces { get; set; }
-   public Double? azucaresReductores { get; set; }
+   public string sangreOculta { get; set; }
+   public string azulMetilenoHeces { get; set; }
+   public string polimorfonucleares { get; set; }
+   public string mononucleares { get; set; }
+   public string paracitosHeces { get; set; }
+   public string azucaresReductores { get; set; }
    public string usuario { get; set; }
    private ClsDb db = new ClsDb();
    public void grabar()
@@ -62,12 +62,12 @@ public class Clscoprologia
             r.idCoprologia = clsHelper.valI(dt.Rows[0]["idCoprologia"].ToString());
             r.idPaciente = clsHelper.valI(dt.Rows[0]["idPaciente"].ToString());
             r.fechaAnalitica = clsHelper.valDate(dt.Rows[0]["fechaAnalitica"].ToString());
-            r.sangreOculta = clsHelper.valD(dt.Rows[0]["sangreOculta"].ToString());
-            r.azulMetilenoHeces = clsHelper.valD(dt.Rows[0]["azulMetilenoHeces"].ToString());
-            r.polimorfonucleares = clsHelper.valD(dt.Rows[0]["polimorfonucleares"].ToString());
-            r.mononucleares = clsHelper.valD(dt.Rows[0]["mononucleares"].ToString());
-            r.paracitosHeces = clsHelper.valD(dt.Rows[0]["paracitosHeces"].ToString());
-            r.azucaresReductores = clsHelper.valD(dt.Rows[0]["azucaresReductores"].ToString());
+            r.sangreOculta = dt.Rows[0]["sangreOculta"].ToString();
+            r.azulMetilenoHeces =dt.Rows[0]["azulMetilenoHeces"].ToString();
+            r.polimorfonucleares =dt.Rows[0]["polimorfonucleares"].ToString();
+            r.mononucleares =dt.Rows[0]["mononucleares"].ToString();
+            r.paracitosHeces =dt.Rows[0]["paracitosHeces"].ToString();
+            r.azucaresReductores =dt.Rows[0]["azucaresReductores"].ToString();
          }
          return r;
       }

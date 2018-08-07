@@ -10,9 +10,9 @@ public class ClsBiologiaMolecular
    public int? idPaciente { get; set; }
    public DateTime? fechaMuestra { get; set; }
    public DateTime? fechaAnalisis { get; set; }
-   public Double? muestra { get; set; }
-   public Double? PCRMycobacteriumTuberculosis { get; set; }
-   public Double? PCRHistoplasmaCapsulatum { get; set; }
+   public string muestra { get; set; }
+   public string PCRMycobacteriumTuberculosis { get; set; }
+   public string PCRHistoplasmaCapsulatum { get; set; }
    public string usuario { get; set; }
    private ClsDb db = new ClsDb();
    public void grabar()
@@ -59,9 +59,9 @@ public class ClsBiologiaMolecular
             r.idPaciente = clsHelper.valI(dt.Rows[0]["idPaciente"].ToString());
             r.fechaMuestra = clsHelper.valDate(dt.Rows[0]["fechaMuestra"].ToString());
             r.fechaAnalisis = clsHelper.valDate(dt.Rows[0]["fechaAnalisis"].ToString());
-            r.muestra = clsHelper.valD(dt.Rows[0]["muestra"].ToString());
-            r.PCRMycobacteriumTuberculosis = clsHelper.valD(dt.Rows[0]["PCRMycobacteriumTuberculosis"].ToString());
-            r.PCRHistoplasmaCapsulatum = clsHelper.valD(dt.Rows[0]["PCRHistoplasmaCapsulatum"].ToString());
+            r.muestra = dt.Rows[0]["muestra"].ToString();
+            r.PCRMycobacteriumTuberculosis = dt.Rows[0]["PCRMycobacteriumTuberculosis"].ToString();
+            r.PCRHistoplasmaCapsulatum = dt.Rows[0]["PCRHistoplasmaCapsulatum"].ToString();
          }
          return r;
       }

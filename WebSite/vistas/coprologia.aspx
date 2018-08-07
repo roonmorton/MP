@@ -18,7 +18,7 @@
          <div class="form-group">
             <label>
                Sangre oculta</label>
-            <asp:TextBox runat="server" ID="txtSangreOculta" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtSangreOculta"></asp:TextBox>
          </div>
       </div>
    </div>
@@ -27,7 +27,7 @@
          <div class="form-group">
             <label>
                Azul de metileno heces</label>
-            <asp:TextBox runat="server" ID="txtAzulMetilenoHeces" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtAzulMetilenoHeces"></asp:TextBox>
          </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
@@ -41,7 +41,7 @@
          <div class="form-group">
             <label>
                Mononucleares(%)</label>
-            <asp:TextBox runat="server" ID="txtMononucleares" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtMononucleares"  CssClass="numero"></asp:TextBox>
          </div>
       </div>
    </div>
@@ -50,7 +50,7 @@
          <div class="form-group">
             <label>
                Parásitos en heces</label>
-            <asp:TextBox runat="server" ID="txtParásitosheces" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtParásitosheces"></asp:TextBox>
          </div>
       </div>
    </div>
@@ -59,7 +59,7 @@
          <div class="form-group">
             <label>
                Azúcares reductores</label>
-            <asp:TextBox runat="server" ID="txtAzucaresReductores" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtAzucaresReductores"></asp:TextBox>
          </div>
       </div>
    </div>
@@ -98,12 +98,12 @@
             </asp:TemplateField>
             <asp:BoundField DataField="FechaAnalitica" DataFormatString="{0:d}"            
                HeaderText="Fecha" />
-                <asp:BoundField DataField="sangreOculta" DataFormatString="{0:F}"  HeaderText="Sangre oculta" />
-                 <asp:BoundField DataField="azulMetilenoHeces" DataFormatString="{0:F}"  HeaderText="Azul de metileno en heces" />
-                 <asp:BoundField DataField="polimorfonucleares" DataFormatString="{0:F}"  HeaderText="Polimorfonucleares(%)" />
-                   <asp:BoundField DataField="mononucleares" DataFormatString="{0:F}"  HeaderText="Mononucleares(%)" />
-                     <asp:BoundField DataField="paracitosHeces" DataFormatString="{0:F}"  HeaderText="Parásitos en heces" />
-                       <asp:BoundField DataField="azucaresReductores" DataFormatString="{0:F}"  HeaderText="Azúcares reductores" />
+                <asp:BoundField DataField="sangreOculta"  HeaderText="Sangre oculta" />
+                 <asp:BoundField DataField="azulMetilenoHeces"  HeaderText="Azul de metileno en heces" />
+                 <asp:BoundField DataField="polimorfonucleares"   HeaderText="Polimorfonucleares(%)" />
+                   <asp:BoundField DataField="mononucleares"   HeaderText="Mononucleares(%)" />
+                     <asp:BoundField DataField="paracitosHeces"   HeaderText="Parásitos en heces" />
+                       <asp:BoundField DataField="azucaresReductores" HeaderText="Azúcares reductores" />
               <asp:TemplateField>
                <ItemTemplate>
                   <asp:LinkButton ID="lnkModificar" runat="server" onclick="lnkModificar_Click" ><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp; Modificar</asp:LinkButton>

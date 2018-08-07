@@ -24,7 +24,7 @@
          <div class="form-group">
             <label>
                Muestra</label>
-            <asp:TextBox runat="server" ID="txtMuestra" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtMuestra" ></asp:TextBox>
          </div>
       </div>
   
@@ -34,7 +34,7 @@
          <div class="form-group">
             <label>
                PCR Mycobacterium tuberculosis</label>
-            <asp:TextBox runat="server" ID="txtPCRMycobacterium" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtPCRMycobacterium" ></asp:TextBox>
          </div>
       </div>
   
@@ -44,7 +44,7 @@
          <div class="form-group">
             <label>
                PCR Histoplasma capsulatum</label>
-            <asp:TextBox runat="server" ID="txtPCRHistoplasma" CssClass="numero"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtPCRHistoplasma" ></asp:TextBox>
          </div>
       </div>
   
@@ -83,15 +83,15 @@
                   <asp:Label ID="lblIdBiologiaMolecular" runat="server" Text='<%# Bind("idBiologiaMolecular") %>'></asp:Label>
                </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="FechaMuestra" DataFormatString="{0:d}" 
+            <asp:BoundField DataField="FechaMuestra" DataFormatString="{0:d}"
                HeaderText="Fecha de muestra" />
-               <asp:BoundField DataField="FechaAnalisis" DataFormatString="{0:d}" 
-               HeaderText="Fecha de análisis" />
-               <asp:BoundField DataField="muestra" DataFormatString="{0:F}" 
+               <asp:BoundField DataField="FechaAnalisis" 
+               HeaderText="Fecha de análisis"  DataFormatString="{0:d}" />
+               <asp:BoundField DataField="muestra" 
                HeaderText="muestra" />
-                <asp:BoundField DataField="PCRMycobacteriumTuberculosis" DataFormatString="{0:F}" 
+                <asp:BoundField DataField="PCRMycobacteriumTuberculosis"  
                HeaderText="PCR Mycobacterium Tuberculosis" />
-                <asp:BoundField DataField="PCRHistoplasmaCapsulatum" DataFormatString="{0:F}" 
+                <asp:BoundField DataField="PCRHistoplasmaCapsulatum"
                HeaderText="PCR Histoplasma Capsulatum" />
               <asp:TemplateField>
                <ItemTemplate>
