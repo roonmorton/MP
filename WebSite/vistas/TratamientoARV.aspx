@@ -110,7 +110,7 @@
                  <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="form-group">
                         <label>&nbsp;</label>
-                         <asp:LinkButton runat="server" CssClass="btn btn-success width100" ID="btnCalcularAdherencia">Calcular adherencia</asp:LinkButton>
+                         <asp:LinkButton runat="server" CssClass="btn btn-success width100" ID="btnCalcularAdherencia" OnClick="btnCalcularAdherencia_Click">Calcular adherencia</asp:LinkButton>
                     </div>
                     
                 </div>

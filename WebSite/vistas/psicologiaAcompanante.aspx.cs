@@ -11,7 +11,7 @@ public partial class vistas_psicologiaAcompanante : System.Web.UI.Page
     {
        try
        {
-
+           cargarCombos();
        }
        catch (Exception ex)
        {
@@ -77,6 +77,69 @@ public partial class vistas_psicologiaAcompanante : System.Web.UI.Page
         {
 
             clsHelper.mostrarError("lnkGuardar_Click", ex, this, true);
+        }
+    }
+
+    void confRb(RadioButtonList rbList, string tabla, string condicion = "", Boolean seleccione = true, string dataField = "id", string textField = "nombre")
+    {
+        ClsCombos cbo = new ClsCombos();
+        try
+        {
+            rbList.DataSource = cbo.fill(tabla, condicion, seleccione, dataField, textField);
+            rbList.DataValueField = dataField;
+            rbList.DataTextField = textField;
+            rbList.DataBind();
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
+
+
+    void confCombo(DropDownList combo, string tabla, string condicion = "", Boolean seleccione = true, string dataField = "id", string textField = "nombre")
+    {
+        ClsCombos cbo = new ClsCombos();
+        try
+        {
+            combo.DataSource = cbo.fill(tabla, condicion, seleccione,dataField,textField );
+            combo.DataValueField = dataField;
+            combo.DataTextField = textField;
+            combo.DataBind();
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
+
+    void cargarCombos()
+    {
+        try
+        {
+            confCombo(cboRelacionConNino, "MRelacionConElNino", "",false);
+            confCombo(cboIntervencion, "MTipoIntervencion","",false);
+            confCombo(cboTipoAlertaAfectiva, "MAlertasAfectivas","",false);
+            confRb(rbProceso, "MProcesoPsicologiaAcompanante","",false);
+            confRb(rbEsAdherente, "MSiNoParcial", "", false);
+            confRb(rbComprensionVIHSegunEdad, "MSiNoParcial", "", false);
+            confRb(rbAlertasAfectivas, "MSiNoNoAplica", "", false);
+            confRb(rbAfrontamientoEnfermedad, "MAfrontamientoEnfermedad", "", false);
+            confRb(rbMinimental, "MminimentalResultado", "", false);
+            confRb(rbDepresion, "MDepresionAnsiedadResultado", "", false);
+            confRb(rbAnsiedad, "MDepresionAnsiedadResultado", "", false);
+            confRb(rbAutoestima, "MAutoestimaResultado", "", false);
+
+
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
         }
     }
 }

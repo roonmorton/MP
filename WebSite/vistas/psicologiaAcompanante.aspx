@@ -57,7 +57,7 @@
                <div class="form-group">
                   <label>
                      ¿Es adherente?</label>
-                  <asp:RadioButtonList runat="server" ID="rbEsAdherente">
+                  <asp:RadioButtonList runat="server" ID="rbEsAdherente" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -65,7 +65,7 @@
                <div class="form-group">
                   <label>
                      Comprensión de información VIH según la edad</label>
-                  <asp:RadioButtonList runat="server" ID="rbComprensionVIHSegunEdad">
+                  <asp:RadioButtonList runat="server" ID="rbComprensionVIHSegunEdad" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -73,7 +73,7 @@
                <div class="form-group">
                   <label>
                      Afrontamiento de la enfermedad</label>
-                  <asp:RadioButtonList runat="server" ID="rbAfrontamientoEnfermedad">
+                  <asp:RadioButtonList runat="server" ID="rbAfrontamientoEnfermedad" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -83,7 +83,7 @@
                <div class="form-group">
                   <label>
                      Alertas afectivas</label>
-                  <asp:RadioButtonList runat="server" ID="rbAlertasAfectivas">
+                  <asp:RadioButtonList runat="server" ID="rbAlertasAfectivas" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -107,7 +107,7 @@
                <div class="form-group">
                   <label>
                      Minimental</label>
-                  <asp:RadioButtonList runat="server" ID="rbMinimental">
+                  <asp:RadioButtonList runat="server" ID="rbMinimental" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -115,7 +115,7 @@
                <div class="form-group">
                   <label>
                      Depresión</label>
-                  <asp:RadioButtonList runat="server" ID="rbDepresion">
+                  <asp:RadioButtonList runat="server" ID="rbDepresion" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -125,7 +125,7 @@
                <div class="form-group">
                   <label>
                      Ansiedad</label>
-                  <asp:RadioButtonList runat="server" ID="rbAnsiedad">
+                  <asp:RadioButtonList runat="server" ID="rbAnsiedad" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>
@@ -133,7 +133,7 @@
                <div class="form-group">
                   <label>
                      Autoestima</label>
-                  <asp:RadioButtonList runat="server" ID="rbAutoestima">
+                  <asp:RadioButtonList runat="server" ID="rbAutoestima" RepeatDirection ="Horizontal" >
                   </asp:RadioButtonList>
                </div>
             </div>

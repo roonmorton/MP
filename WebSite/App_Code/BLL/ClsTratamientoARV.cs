@@ -8,10 +8,6 @@ using System.Web;
 /// </summary>
 public class ClsTratamientoARV
 {
-	public ClsTratamientoARV()
-	{
-		//
-		// TODO: Agregar aquí la lógica del constructor
-		//
-	}
+	
+  
 }
