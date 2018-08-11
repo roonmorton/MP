@@ -1352,3 +1352,17 @@ El nombre de columna 'nombre' no es válido.-cargarCbo
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    en System.Web.HttpResponse.Redirect(String url)
    en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 16:31:27,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 16:32:13,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 53,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal

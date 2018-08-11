@@ -312,4 +312,49 @@ using System.Configuration;
 
       }
 
-   }//EOCls
+    public void ejecutarSPTPV(string spNombre, SqlConnection cn = null, List<DataTable> dt = null, string[] nombreTVP = null, params SqlParameter[] arrParam)
+    {
+        SqlCommand cmd = new SqlCommand();
+        int index = 0;
+        try
+        {
+            if (cn == null) { cn = conexion; }
+            if (cn.State == ConnectionState.Open) cn.Close();
+            cn.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = spNombre;
+            cmd.Connection = cn;
+            if (dt != null)
+            {
+                //cmd.Parameters.Add("@tvp", SqlDbType.Structured).Value = dt;
+                    foreach (DataTable data in dt)
+                    {
+                        SqlParameter paramtvp = cmd.Parameters.AddWithValue(
+                            nombreTVP[index], data);
+                        paramtvp.SqlDbType = SqlDbType.Structured;
+                        paramtvp.TypeName = data.TableName;
+                    index++;
+                    }
+                /*paramTvp.Value = dt; 
+                paramTvp.SqlDbType = SqlDbType.Structured;
+                paramTvp.TypeName = dt.TableName;*/
+                //cmd.Parameters.Add(paramtvp);
+            }
+
+            if (arrParam.Length > 0)
+            {
+                foreach (SqlParameter param in arrParam)
+                {
+                    cmd.Parameters.Add(param);
+                }
+            }
+            cmd.ExecuteNonQuery();
+            if (cn.State == ConnectionState.Open) cn.Close();
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+    }
+
+}//EOCls
