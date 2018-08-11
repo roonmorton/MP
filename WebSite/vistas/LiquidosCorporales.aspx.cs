@@ -15,7 +15,7 @@ public partial class vistas_LiquidosCorporales : System.Web.UI.Page
             if (!IsPostBack)
             {
                 asignarPermisos();
-                if (Session["idLiquidosCorporales"] != null)
+                if (Session["idPaciente"] != null)
                 {
                     buscar();
                 }

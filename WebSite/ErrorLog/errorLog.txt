@@ -1366,3 +1366,62 @@ El nombre de columna 'nombre' no es válido.-cargarCbo
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    en System.Web.HttpResponse.Redirect(String url)
    en vistas_inicio.lnkNuevaVisita_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 53,lnkNuevaVisita_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 17:29:31,forastero,   en vistas_signosVitales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 228
+   en vistas_signosVitales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\signosVitales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+11/08/2018 17:30:12,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 17:30:26,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 17:30:40,aramirez,   en vistas_LiquidosCorporales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 323
+   en vistas_LiquidosCorporales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+11/08/2018 17:30:50,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 17:30:56,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 17:31:06,aramirez,   en vistas_LiquidosCorporales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 323
+   en vistas_LiquidosCorporales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+11/08/2018 17:31:19,aramirez,   en vistas_LiquidosCorporales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 323
+   en vistas_LiquidosCorporales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+11/08/2018 17:34:13,forastero,   en vistas_LiquidosCorporales.asignarPermisos() en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 323
+   en vistas_LiquidosCorporales.Page_Load(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 17,Load,Error:Subproceso anulado.-asignarPermisos
+11/08/2018 17:34:19,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en _Default.btnLogin_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\Default.aspx.cs:línea 52,btnLogin_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 17:34:24,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_inicio.lnkVerPaciente_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\inicio.aspx.cs:línea 129,lnkVerPaciente_Click,Error:Subproceso anulado.-AbortInternal
+11/08/2018 17:37:11,aramirez,   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en vistas_LiquidosCorporales.lnkCerrar_Click(Object sender, EventArgs e) en c:\Users\estuardo\Documents\GitHub\MP\WebSite\vistas\LiquidosCorporales.aspx.cs:línea 133,lnkCerrar_Click,Error:Subproceso anulado.-AbortInternal

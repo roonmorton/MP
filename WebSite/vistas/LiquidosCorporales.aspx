@@ -69,7 +69,7 @@
                         <div class="form-group">
                             <label>
                                 Leucocitos (cel/mm3)</label>
-                            <asp:TextBox ID="txtLeucocitos" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtLeucocitos" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                         <div class="form-group">
                             <label>
                                 Linfocitos (%)</label>
-                            <asp:TextBox ID="txtLinfocitos" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtLinfocitos" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         <div class="form-group">
                             <label>
                                 Glucosa (mg/dL)</label>
-                            <asp:TextBox ID="txtGlocosa" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtGlocosa" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-12">
@@ -163,7 +163,7 @@
                         <div class="form-group">
                             <label>
                                 Amilasia (mg/dL)</label>
-                            <asp:TextBox ID="txtAmilasia" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtAmilasia" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-12">
@@ -203,28 +203,28 @@
                         <div class="form-group">
                             <label>
                                 Cloro (mEq/L)</label>
-                            <asp:TextBox ID="txtCloro" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtCloro" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-12">
                         <div class="form-group">
                             <label>
                                 Bicarbonato (mmoI/L)</label>
-                            <asp:TextBox ID="txtBicarbonato" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtBicarbonato" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-12">
                         <div class="form-group">
                             <label>
                                 IgG (mg/L)</label>
-                            <asp:TextBox ID="txtIgG" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtIgG" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-12">
                         <div class="form-group">
                             <label>
                                 CK (U/L)</label>
-                            <asp:TextBox ID="txtCK" CssClass="letras" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtCK" CssClass="numero" runat="server"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -237,6 +237,7 @@
                                 Liquido</label>
                             <asp:TextBox ID="txtLiquidoAntigenos" CssClass="texto" runat="server"></asp:TextBox>
                         </div>
+
                     </div>
                 </div>
                 <div class="row">
